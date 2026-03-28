@@ -53,8 +53,8 @@
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
     .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    img.grayscale-hover { transition: filter 0.4s ease; }
-    img.grayscale-hover:hover { filter: grayscale(100%); }
+    img.grayscale-hover { filter: grayscale(100%); transition: filter 0.6s ease; }
+    img.grayscale-hover:hover { filter: grayscale(0%); }
   </style>
 </head>
 <body class="bg-surface text-on-surface overflow-x-hidden">
@@ -244,7 +244,16 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+    document.querySelectorAll("#mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.add("hidden");
+        open = false;
+        bar1.style.transform = "";
+        bar2.style.opacity = "";
+        bar3.style.transform = "";
+      });
+    });
   </script>
 </body>
 </html>

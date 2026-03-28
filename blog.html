@@ -331,7 +331,16 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+    document.querySelectorAll("#mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.add("hidden");
+        open = false;
+        bar1.style.transform = "";
+        bar2.style.opacity = "";
+        bar3.style.transform = "";
+      });
+    });
   </script>
 </body>
 </html>
