@@ -90,189 +90,43 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="pt-20 min-h-[50vh] flex items-center bg-surface relative overflow-hidden">
-    <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/6 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-6 py-20 w-full">
+  <section class="pt-20 min-h-screen flex items-center bg-surface relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 py-24 w-full text-center">
       <div class="fade-in">
-        <div class="inline-flex items-center gap-2 bg-primary-fixed text-primary text-xs font-bold px-4 py-2 rounded-full font-manrope mb-6">
-          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">rss_feed</span>
-          The Founder's Feed
+        <div class="inline-flex items-center gap-2 bg-primary-fixed text-primary text-xs font-bold px-4 py-2 rounded-full font-manrope mb-8">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">edit_note</span>
+          Writing in progress
         </div>
-        <h1 class="font-manrope font-extrabold text-6xl lg:text-7xl tracking-tighter text-on-surface leading-[1.0] mb-4">
-          Insights &amp; <span class="text-primary">Iterations.</span>
+        <h1 class="font-manrope font-extrabold text-6xl lg:text-7xl tracking-tighter text-on-surface leading-[1.0] mb-6">
+          Thoughts are<br/><span class="text-primary">brewing.</span>
         </h1>
-        <p class="text-on-surface-variant text-lg font-inter max-w-lg">
-          Unfiltered thinking on building, investing, and everything in between. New posts every Tuesday.
+        <p class="text-on-surface-variant text-lg font-inter max-w-xl mx-auto mb-12 leading-relaxed">
+          I haven't written here yet — but I'm in rooms, at events, and in conversations every day that are worth documenting. This space is where I'll put all of that down when I'm ready.
         </p>
-      </div>
-    </div>
-  </section>
 
-  <!-- CATEGORY FILTER -->
-  <section class="bg-surface pb-4">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="fade-in flex flex-wrap gap-2">
-        <button class="filter-pill active text-sm font-semibold px-4 py-2 rounded-full font-manrope bg-surface-container-highest text-primary" data-filter="all">All Posts</button>
-        <button class="filter-pill text-sm font-semibold px-4 py-2 rounded-full font-manrope bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="strategy">#Strategy</button>
-        <button class="filter-pill text-sm font-semibold px-4 py-2 rounded-full font-manrope bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="tech">#Tech</button>
-        <button class="filter-pill text-sm font-semibold px-4 py-2 rounded-full font-manrope bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="culture">#Culture</button>
-        <button class="filter-pill text-sm font-semibold px-4 py-2 rounded-full font-manrope bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="growth">#Growth</button>
-        <button class="filter-pill text-sm font-semibold px-4 py-2 rounded-full font-manrope bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="vc">#VentureCapital</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED POST -->
-  <section class="bg-surface py-10">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="fade-in grid md:grid-cols-2 min-h-[500px] rounded-[2rem] overflow-hidden shadow-sm bg-surface-container-low">
-        <!-- Left image -->
-        <div class="relative overflow-hidden min-h-[280px] md:min-h-0">
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuADgG0DdwS-UWUag4bCA-C7YKIqELi49f6RrgPpZagO78ahIlMAYam39z0iczW3LSFS96tNfPCNSZTA14QbLaLzOF6orwcdEtZGZdebox2u5xnAdOkWQpNdr-KTemHzdXRveCirG7ZVsOHabX4qWRVxvfctLuRDMmMAoRiDkppRI90Tv3x1cuq0rX5O6d_2LGXNPedzYJZIbqciuOGj6VRhNpCvM7YAFaqQCW9xciUy3h22zNUBeDrjh3kbGXCax6YE5CZE29SkXnw"
-            alt="Featured post"
-            class="w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#131B2E]/50 to-transparent"></div>
-        </div>
-        <!-- Right content -->
-        <div class="flex flex-col justify-center p-10">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="bg-primary-fixed text-primary text-xs font-bold px-3 py-1.5 rounded-lg font-manrope">Featured Insight</span>
-            <span class="text-on-surface-variant text-xs font-inter">March 18, 2025</span>
-          </div>
-          <h2 class="font-manrope font-extrabold text-3xl text-on-surface tracking-tighter mb-4 leading-snug">
-            Why Your Series A is Actually a Product Problem
-          </h2>
-          <p class="text-on-surface-variant font-inter text-sm leading-relaxed mb-8">
-            Most founders prepare for their Series A like it's a fundraising event. It's not. It's a product test — the investors are just the customers. Here's how to reframe the entire process and close faster.
-          </p>
-          <a href="#" class="inline-flex items-center gap-2 text-primary text-sm font-semibold font-inter hover:gap-3 transition-all">
-            Read the Story <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        <!-- LinkedIn CTA -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+          <a
+            href="https://www.linkedin.com/in/tanishq-jain-6a1565122/"
+            target="_blank"
+            class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-on-primary-fixed-variant transition-colors font-inter text-sm"
+          >
+            <span class="material-symbols-outlined text-base">open_in_new</span>
+            Follow on LinkedIn
           </a>
+          <span class="text-on-surface-variant text-sm font-inter">That's where I share updates for now.</span>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- POST GRID -->
-  <section class="bg-surface pb-20 pt-8">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <!-- Post 1 -->
-        <article class="fade-in bg-surface-container-low rounded-3xl overflow-hidden hover:shadow-md transition-shadow cursor-pointer group">
-          <div class="overflow-hidden">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP5djL0G3EeQ3kautrSt-wplBsVkwZu1HageKqLvxIywaTgo-87OlltxSMXV5_K0-rJkIUjflM4XuoCoM1BPhyoBLsYD7cGjH1lO3457-5zaC3wvkw3Y96eYoE2GdDEzG5_Yb2biGOUL7UeD1F0TZ4MfuFIOE-rAhF0b98Ok0QpkuNld6vOpyuKG_LT0UCQM3zSlxxEPUDYbmaB4t9_sXv123IRLbn3zbYcS3Q9IrLb0YO9LpDxnE5OfNEl2a6_T_LtQbesVRXrwg"
-              alt="AI in Fintech"
-              class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-400"
-            />
-          </div>
-          <div class="p-6">
-            <span class="bg-secondary-container text-on-secondary-container text-xs font-semibold px-3 py-1 rounded-full font-manrope">#Tech</span>
-            <h3 class="font-manrope font-bold text-lg text-on-surface tracking-tight mt-3 mb-2 leading-snug">The Future of AI in Fintech</h3>
-            <p class="text-on-surface-variant text-sm font-inter leading-relaxed mb-4">AI isn't eating fintech — it's restructuring the cost architecture of trust. Here's what that means for builders entering the space.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-on-surface-variant text-xs font-inter">Feb 28, 2025</span>
-              <a href="#" class="text-primary hover:text-on-primary-fixed-variant transition-colors">
-                <span class="material-symbols-outlined text-base">arrow_forward</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Post 2 -->
-        <article class="fade-in bg-surface-container-low rounded-3xl overflow-hidden hover:shadow-md transition-shadow cursor-pointer group" style="transition-delay:0.08s">
-          <div class="overflow-hidden">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7klxqcws0mklZdrwPuQBcEDPzzaNdxfZUyKJJXC-u3lvxTBVNVoQt1XnFQKhGC1gztXdQ4uHfshEREJjbJeEQE5LoYNGMyLZWZeAbnUUBXy2lLo1swIn0QHCYmX2CZ72Xm2ezxoCG06dMzfLBRIWS37z9H6JyzaAg5VygaCvNwZYv2ZiBfyQACHoB7fhlalhT9ON-9pSnszI914tbrd2Mk0vIOiTUvtV_wDwRUSuCyerhjEGpSUEBEDIhmC57vu9Uemq4B4M_14w"
-              alt="Remote Teams Culture"
-              class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-400"
-            />
-          </div>
-          <div class="p-6">
-            <span class="bg-secondary-container text-on-secondary-container text-xs font-semibold px-3 py-1 rounded-full font-manrope">#Culture</span>
-            <h3 class="font-manrope font-bold text-lg text-on-surface tracking-tight mt-3 mb-2 leading-snug">Building Culture in Remote Teams</h3>
-            <p class="text-on-surface-variant text-sm font-inter leading-relaxed mb-4">Culture isn't a ping-pong table or a Slack emoji. It's the behavior that persists when the founder isn't watching. Here's how to build it async.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-on-surface-variant text-xs font-inter">Feb 14, 2025</span>
-              <a href="#" class="text-primary hover:text-on-primary-fixed-variant transition-colors">
-                <span class="material-symbols-outlined text-base">arrow_forward</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="fade-in bg-surface-container-low rounded-3xl overflow-hidden hover:shadow-md transition-shadow cursor-pointer group" style="transition-delay:0.16s">
-          <div class="overflow-hidden">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAre7DSRIYx4WRRVFB2FrCNWXOT_hkvatyt2LCuc-DOP4Kb4CGaTfiuz3EcPyi_DTw52cM5EHpMp231zZfXPZkJZ8TWbChriPUxfQ0gDRSAz0jJGZzA_uukEsrqcD1LkppV5grQZCEhp5ecFirXLmHjfdJDAnVYDfRkS8Ocd1NXZmP6TUHzWtUkrXb4rMdd_tUnImDHWxwCVd4C-IfDxy8E1VgfXJHSpkI_SW8tXG8Uc"
-              alt="MVP Mindset"
-              class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-400"
-            />
-          </div>
-          <div class="p-6">
-            <span class="bg-secondary-container text-on-secondary-container text-xs font-semibold px-3 py-1 rounded-full font-manrope">#Strategy</span>
-            <h3 class="font-manrope font-bold text-lg text-on-surface tracking-tight mt-3 mb-2 leading-snug">The MVP Mindset</h3>
-            <p class="text-on-surface-variant text-sm font-inter leading-relaxed mb-4">An MVP isn't a broken version of your product. It's a learning vehicle with just enough fidelity to generate signal. The mistake most founders make is confusing the two.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-on-surface-variant text-xs font-inter">Jan 30, 2025</span>
-              <a href="#" class="text-primary hover:text-on-primary-fixed-variant transition-colors">
-                <span class="material-symbols-outlined text-base">arrow_forward</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER SECTION -->
-  <section class="bg-surface pb-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="fade-in relative overflow-hidden bg-[#131B2E] rounded-[2.5rem] p-12 lg:p-16">
-        <!-- Decorative orbs -->
-        <div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-8 right-10 w-48 h-48 bg-tertiary/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-1/2 left-1/2 w-80 h-80 bg-tertiary-container/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
-
-        <div class="relative grid md:grid-cols-2 gap-12 items-center">
-          <!-- Left -->
-          <div>
-            <div class="inline-flex items-center gap-2 bg-tertiary-container text-on-tertiary-container text-xs font-bold px-3 py-1.5 rounded-lg font-manrope mb-5">
-              <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">mark_email_unread</span>
-              Weekly dispatch
-            </div>
-            <h2 class="font-manrope font-extrabold text-4xl lg:text-5xl text-white tracking-tighter mb-4 leading-tight">
-              Join the Journey.
-            </h2>
-            <p class="text-surface-container-high font-inter text-sm leading-relaxed max-w-sm">
-              One email a week. No fluff, no filler. Just the lessons, observations, and frameworks I'm using right now to build and invest.
-            </p>
-          </div>
-          <!-- Right -->
-          <div>
-            <form class="space-y-4" onsubmit="return false;">
-              <div>
-                <label for="email-input" class="text-surface-container-high text-xs font-semibold font-manrope block mb-2 uppercase tracking-widest">Your email</label>
-                <input
-                  id="email-input"
-                  type="email"
-                  placeholder="founder@company.com"
-                  class="w-full bg-white/10 border border-white/20 text-white placeholder-surface-container-high rounded-xl px-4 py-3.5 text-sm font-inter focus:outline-none focus:ring-2 focus:ring-primary-fixed focus:border-transparent transition-all"
-                />
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-primary text-white font-semibold py-3.5 rounded-xl text-sm font-inter hover:bg-on-primary-fixed-variant transition-colors"
-              >
-                Get Updates
-              </button>
-              <p class="text-surface-container-high text-xs font-inter text-center">No spam. Unsubscribe anytime.</p>
-            </form>
+        <!-- Topics I plan to write about -->
+        <div class="fade-in">
+          <p class="text-on-surface-variant text-xs font-semibold uppercase tracking-widest font-manrope mb-6">Topics on my mind</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Startup Sourcing</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Early-Stage Investing</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">AI & Productivity</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Indian Startup Ecosystem</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Founder Stories</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Books & Frameworks</span>
           </div>
         </div>
       </div>
