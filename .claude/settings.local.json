@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for dir:*)",
+      "Bash(do echo:*)",
+      "Read(//Users/tanishqjain/Desktop/my_website/**)",
+      "Bash(done)",
+      "Bash(sed -i '' 's|Gallery — Modern Founder|Gallery — Tanishq Jain|g;:*)",
+      "Bash(__NEW_LINE_48cea21f297f92bb__ sed:*)",
+      "Bash(__NEW_LINE_48cea21f297f92bb__ echo:*)"
+    ]
+  }
+}

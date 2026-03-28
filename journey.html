@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journey — Tanishq Jain</title>
+  <meta name="description" content="The trajectory of Tanishq Jain — from Enerjazz to Delhi Angels. A timeline of roles, skills, and the tools that power his work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#004AC6',
+            tertiary: '#3E3FCC',
+            'on-surface': '#131B2E',
+            surface: '#FAF8FF',
+            'surface-container-low': '#F2F3FF',
+            'surface-container': '#EAEDFF',
+            'surface-container-high': '#E2E7FF',
+            'surface-container-highest': '#DAE2FD',
+            'on-surface-variant': '#434655',
+            'primary-fixed': '#DBE1FF',
+            'on-primary-fixed-variant': '#003EA8',
+            'secondary-container': '#D5E3FC',
+            'on-secondary-container': '#57657A',
+            'tertiary-container': '#585BE6',
+            'on-tertiary-container': '#F1EEFF',
+            'outline-variant': '#C3C6D7',
+            'primary-container': '#2563EB',
+            'on-primary': '#FFFFFF',
+            'on-background': '#131B2E',
+          },
+          fontFamily: {
+            manrope: ['Manrope', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            '2rem': '2rem',
+            '2.5rem': '2.5rem',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #FAF8FF; color: #131B2E; }
+    .font-manrope { font-family: 'Manrope', sans-serif; }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .gradient-text {
+      background: linear-gradient(135deg, #004AC6 0%, #3E3FCC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface overflow-x-hidden">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 left-0 right-0 z-50 h-20 bg-[#FAF8FF]/80 backdrop-blur-xl border-b border-[#F2F3FF]">
+    <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+      <a href="index.html" class="font-manrope font-extrabold text-xl tracking-tighter text-on-surface">Tanishq Jain</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Home</a>
+        <a href="story.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Story</a>
+        <a href="journey.html" class="text-sm font-medium text-primary border-b-2 border-primary pb-0.5">Journey</a>
+        <a href="gallery.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Gallery</a>
+        <a href="blog.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Blog</a>
+        <a href="mailto:Tanishqjain.work@gmail.com" class="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-on-primary-fixed-variant transition-colors">Contact Me</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+        <span class="block w-6 h-0.5 bg-on-surface transition-all duration-300" id="bar1"></span>
+        <span class="block w-6 h-0.5 bg-on-surface transition-all duration-300" id="bar2"></span>
+        <span class="block w-6 h-0.5 bg-on-surface transition-all duration-300" id="bar3"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#FAF8FF]/95 backdrop-blur-xl px-6 pb-6 border-b border-[#F2F3FF]">
+      <div class="flex flex-col gap-4 pt-4">
+        <a href="index.html" class="text-sm font-medium text-on-surface-variant">Home</a>
+        <a href="story.html" class="text-sm font-medium text-on-surface-variant">Story</a>
+        <a href="journey.html" class="text-sm font-medium text-primary">Journey</a>
+        <a href="gallery.html" class="text-sm font-medium text-on-surface-variant">Gallery</a>
+        <a href="blog.html" class="text-sm font-medium text-on-surface-variant">Blog</a>
+        <a href="mailto:Tanishqjain.work@gmail.com" class="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-xl text-center">Contact Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="pt-20 min-h-[55vh] flex items-center bg-surface relative overflow-hidden">
+    <div class="absolute top-20 left-1/3 w-80 h-80 bg-primary/8 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center w-full">
+      <div class="fade-in">
+        <span class="text-primary uppercase tracking-widest text-xs font-semibold font-manrope block mb-6">The Trajectory</span>
+        <h1 class="font-manrope font-extrabold text-5xl lg:text-6xl tracking-tighter leading-[1.05] mb-6">
+          Every role was a <span class="gradient-text">stepping stone.</span>
+        </h1>
+        <p class="text-on-surface-variant text-lg leading-relaxed font-inter max-w-md">
+          From a 5-person YC startup to the Delhi Angels network — a timeline of deliberate moves, hard lessons, and compounding growth.
+        </p>
+      </div>
+      <div class="fade-in flex justify-end" style="transition-delay:0.15s">
+        <div class="w-28 h-28 bg-primary-fixed rounded-[2rem] flex items-center justify-center shadow-lg">
+          <span class="material-symbols-outlined text-primary" style="font-size: 56px; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">rocket_launch</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE SECTION -->
+  <section class="bg-surface-container-low py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="relative">
+        <!-- Vertical center line (desktop only) -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-outline-variant -translate-x-1/2"></div>
+
+        <!-- Milestone 1 — Current Role -->
+        <div class="relative mb-20 md:grid md:grid-cols-2 md:gap-12 items-center">
+          <div class="fade-in md:text-right mb-8 md:mb-0">
+            <div class="inline-block bg-primary-fixed text-primary text-xs font-bold px-3 py-1.5 rounded-lg font-manrope tracking-wide mb-4">Nov 2025 — Present</div>
+            <h3 class="font-manrope font-extrabold text-2xl tracking-tight text-on-surface mb-1">Ecosystem Builder</h3>
+            <div class="text-primary font-semibold text-base font-manrope mb-3">Delhi Angels — Startup & Angels</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed font-inter max-w-sm md:ml-auto">
+              Working alongside Mr. Kunwer Sachdev and Shivam Ahuja to source high-potential startups, build and manage deal pipelines, and connect founders with the right capital. Operating at the heart of one of India's most active angel networks.
+            </p>
+          </div>
+          <!-- Center dot -->
+          <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-primary rounded-full ring-4 ring-surface z-10"></div>
+          <!-- Right image -->
+          <div class="fade-in" style="transition-delay:0.1s">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuACOiJb6lu4FtR2gmxcA_SPpudRR6TaxWuYRb7jNtd5bB97Ga5XFUcBgf4HBNZLLMtnNih5zlXy1hRgvzab_Oh1uCmxv9Lw_ONhUNHafCAMCTrWI-NPhQD7x0N6iQ7JLh4gX1gwEKbqqhAcCW1iQjKj2_28JYTYdBL0K_xrRxiRZjq9FygCMU1M5W3NMk6gzfxJKehjz0ontBiIyTNhPK7kGRV8s9wniMBzZztT08idbkUoKyhI0p6l4q44RPTQzdlCpskmBscq0U4"
+              alt="Delhi Angels ecosystem"
+              class="w-full rounded-[2rem] object-cover aspect-video shadow-lg"
+            />
+          </div>
+        </div>
+
+        <!-- Milestone 2 — Enerjazz -->
+        <div class="relative mb-20 md:grid md:grid-cols-2 md:gap-12 items-center">
+          <!-- Left image -->
+          <div class="fade-in mb-8 md:mb-0">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKYt3zvlewq2G-vu8qSgoI3xPHCxue42sh0Pr7mklNUQmvTEXbnCqDg0j0o9SnB6IkeJh3fbu86V8vRtAY8nhrS9cHKOj3sQc_X8O27p8vLdXjljyR2IEz__hnNWqRKSPGKRVN_iT9zGU1APi-a6F0o1lnFbkD-yi5IgIEOLBDZ72M48r4zvAgbAId61gLHGZVFtk916Fhzi2TafiLk0X28NZnixsjBUZ5h1z2OddN1NGFzTAplOmVaKfLz693LwFXdJ9GNqOoC0M"
+              alt="Enerjazz startup"
+              class="w-full rounded-[2rem] object-cover aspect-video shadow-lg"
+            />
+          </div>
+          <!-- Center dot -->
+          <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-tertiary rounded-full ring-4 ring-surface z-10"></div>
+          <!-- Right text -->
+          <div class="fade-in" style="transition-delay:0.1s">
+            <div class="inline-block bg-surface-container text-on-surface-variant text-xs font-bold px-3 py-1.5 rounded-lg font-manrope tracking-wide mb-4">Mar 2025 — Nov 2025</div>
+            <h3 class="font-manrope font-extrabold text-2xl tracking-tight text-on-surface mb-1">Marketing Consultant</h3>
+            <div class="text-tertiary font-semibold text-base font-manrope mb-3">Enerjazz · YC S21</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed font-inter max-w-sm">
+              Joined as employee #5. With no departments and no playbooks, I wore every hat — HR, sales, finance, and marketing simultaneously. Worked directly under CEO Ravi Bharihoke and CTO Pratik Ranjan Das. A crash course in what it really takes to build a startup from zero.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 — The Foundation -->
+        <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+          <div class="fade-in md:text-right mb-8 md:mb-0">
+            <div class="inline-block border border-outline-variant text-on-surface-variant text-xs font-bold px-3 py-1.5 rounded-lg font-manrope tracking-wide mb-4">2021 — 2025</div>
+            <h3 class="font-manrope font-extrabold text-2xl tracking-tight text-on-surface mb-1">The Foundation Years</h3>
+            <div class="text-on-surface-variant font-semibold text-base font-manrope mb-3">Photography · CAT Prep · Self-Discovery</div>
+            <p class="text-on-surface-variant text-sm leading-relaxed font-inter max-w-sm md:ml-auto">
+              After losing my father in 2021, I rebuilt myself — first through a lens on the streets of Delhi, then through rigorous CAT preparation, then through the chaos of early startup life. Every chapter taught me something no curriculum could.
+            </p>
+          </div>
+          <!-- Center dot -->
+          <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-surface rounded-full ring-2 ring-outline-variant z-10"></div>
+          <div class="fade-in" style="transition-delay:0.1s">
+            <div class="w-full bg-surface-container rounded-[2rem] p-10 flex items-center justify-center aspect-video">
+              <div class="text-center">
+                <span class="material-symbols-outlined text-primary mb-3" style="font-size:48px; font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 48">photo_camera</span>
+                <div class="font-manrope font-bold text-on-surface text-lg tracking-tight">Streets of Delhi</div>
+                <div class="text-on-surface-variant text-sm font-inter mt-1">Photography · Recovery · Reinvention</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS BENTO + CREDENTIALS -->
+  <section class="bg-surface py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-3 gap-6">
+
+        <!-- Skills Bento (2/3) -->
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Deal flow chips -->
+          <div class="fade-in bg-surface-container-low rounded-[2rem] p-8">
+            <h3 class="font-manrope font-bold text-lg text-on-surface mb-5 tracking-tight">Deal Flow & Ecosystem</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full font-manrope">Startup Sourcing</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Deal Pipeline</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Angel Network</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Due Diligence</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Investor Relations</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Founder Networking</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Market Research</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Ecosystem Mapping</span>
+            </div>
+          </div>
+
+          <!-- AI & tools chips -->
+          <div class="fade-in bg-surface-container-low rounded-[2rem] p-8">
+            <h3 class="font-manrope font-bold text-lg text-on-surface mb-5 tracking-tight">AI Tools & Stack</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full font-manrope">Claude</span>
+              <span class="bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full font-manrope">Antigravity</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">AI Automation</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Workflow Design</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Prompt Engineering</span>
+              <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Productivity Systems</span>
+            </div>
+          </div>
+
+          <!-- Dark feature card -->
+          <div class="fade-in bg-[#131B2E] rounded-[2rem] p-8 relative overflow-hidden">
+            <div class="absolute -top-8 -right-8 w-40 h-40 bg-primary/20 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="relative">
+              <div class="inline-flex items-center gap-2 bg-tertiary-container text-on-tertiary-container text-xs font-bold px-3 py-1.5 rounded-lg font-manrope mb-5">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">auto_awesome</span>
+                Currently Active
+              </div>
+              <h3 class="font-manrope font-extrabold text-2xl text-white tracking-tight mb-3">Building AI tools that make the ecosystem smarter.</h3>
+              <p class="text-surface-container-high text-sm font-inter leading-relaxed mb-6">From deal flow automations to research pipelines — I actively build tools that help me (and eventually others) work faster and with more clarity.</p>
+              <a href="mailto:Tanishqjain.work@gmail.com" class="inline-flex items-center gap-2 text-primary-fixed text-sm font-semibold font-inter hover:text-white transition-colors">
+                Let's collaborate <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently sidebar (1/3) -->
+        <div class="space-y-4">
+          <div class="fade-in">
+            <h3 class="font-manrope font-bold text-base text-on-surface mb-4 tracking-tight">Currently</h3>
+          </div>
+
+          <div class="fade-in bg-surface-container-low rounded-[2rem] p-6">
+            <div class="w-10 h-10 bg-primary-fixed rounded-xl flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">hub</span>
+            </div>
+            <div class="font-manrope font-bold text-sm text-on-surface mb-1">Delhi Angels</div>
+            <div class="text-on-surface-variant text-xs font-inter">Ecosystem Builder · Startup & Angels · Nov 2025</div>
+          </div>
+
+          <div class="fade-in bg-surface-container-low rounded-[2rem] p-6" style="transition-delay:0.08s">
+            <div class="w-10 h-10 bg-primary-fixed rounded-xl flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">menu_book</span>
+            </div>
+            <div class="font-manrope font-bold text-sm text-on-surface mb-1">Reading Obsessively</div>
+            <div class="text-on-surface-variant text-xs font-inter">Startup ecosystem · Venture · Business biographies</div>
+          </div>
+
+          <div class="fade-in bg-surface-container-low rounded-[2rem] p-6" style="transition-delay:0.16s">
+            <div class="w-10 h-10 bg-primary-fixed rounded-xl flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1">smart_toy</span>
+            </div>
+            <div class="font-manrope font-bold text-sm text-on-surface mb-1">Building with AI</div>
+            <div class="text-on-surface-variant text-xs font-inter">Automations · Productivity tools · Workflows</div>
+          </div>
+
+          <div class="fade-in bg-surface-container-low rounded-[2rem] p-6" style="transition-delay:0.24s">
+            <div class="w-10 h-10 bg-surface-container-high rounded-xl flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-on-surface-variant text-lg" style="font-variation-settings: 'FILL' 1">photo_camera</span>
+            </div>
+            <div class="font-manrope font-bold text-sm text-on-surface mb-1">Photographer at Heart</div>
+            <div class="text-on-surface-variant text-xs font-inter">Streets of Delhi · Visual storytelling</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface border-t border-surface-container-low py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <a href="index.html" class="font-manrope font-extrabold text-lg tracking-tighter text-on-surface">Tanishq Jain</a>
+      <p class="text-on-surface-variant text-sm font-inter">© 2025 Tanishq Jain. Built at the intersection of deals, data & AI.</p>
+      <div class="flex items-center gap-5">
+        <a href="https://www.linkedin.com/in/tanishq-jain-6a1565122/" target="_blank" class="text-on-surface-variant hover:text-primary transition-colors text-sm font-inter">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    let open = false;
+    btn.addEventListener('click', () => {
+      open = !open;
+      menu.classList.toggle('hidden', !open);
+      if (open) {
+        bar1.style.transform = 'translateY(8px) rotate(45deg)';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
+      } else {
+        bar1.style.transform = '';
+        bar2.style.opacity = '';
+        bar3.style.transform = '';
+      }
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
