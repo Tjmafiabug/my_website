@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery — Tanishq Jain</title>
   <meta name="description" content="Selected works and projects — an asymmetric portfolio spanning infrastructure, fintech, design systems, and venture tools." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tanishqjain.co/gallery" />
+  <meta property="og:title" content="Gallery — Tanishq Jain" />
+  <meta property="og:description" content="Selected works and projects from Tanishq Jain — ecosystem builder, deal sourcer, and AI enthusiast." />
+  <meta property="og:image" content="https://tanishqjain.co/assets/images/974cbced-1a24-40a1-8e21-31aaa5b963ef.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery — Tanishq Jain" />
+  <meta name="twitter:description" content="Selected works and projects from Tanishq Jain — ecosystem builder, deal sourcer, and AI enthusiast." />
+  <meta name="twitter:image" content="https://tanishqjain.co/assets/images/974cbced-1a24-40a1-8e21-31aaa5b963ef.jpg" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -56,6 +67,14 @@
     .project-img { transition: transform 0.4s ease; }
     .project-card:hover .project-img { transform: scale(1.04); }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMHG32VKX5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SMHG32VKX5');
+  </script>
 </head>
 <body class="bg-surface text-on-surface overflow-x-hidden">
 
@@ -69,7 +88,7 @@
         <a href="journey.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Journey</a>
         <a href="gallery.html" class="text-sm font-medium text-primary border-b-2 border-primary pb-0.5">Gallery</a>
         <a href="blog.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Blog</a>
-        <a href="mailto:Tanishqjain.work@gmail.com" class="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-on-primary-fixed-variant transition-colors">Contact Me</a>
+        <a href="contact.html" class="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-on-primary-fixed-variant transition-colors">Contact Me</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
         <span class="block w-6 h-0.5 bg-on-surface transition-all duration-300" id="bar1"></span>
@@ -84,177 +103,228 @@
         <a href="journey.html" class="text-sm font-medium text-on-surface-variant">Journey</a>
         <a href="gallery.html" class="text-sm font-medium text-primary">Gallery</a>
         <a href="blog.html" class="text-sm font-medium text-on-surface-variant">Blog</a>
-        <a href="mailto:Tanishqjain.work@gmail.com" class="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-xl text-center">Contact Me</a>
+        <a href="contact.html" class="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-xl text-center">Contact Me</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="pt-20 min-h-[50vh] flex items-center bg-surface relative overflow-hidden">
-    <div class="absolute top-1/3 right-0 w-72 h-72 bg-primary/8 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-6 py-20 w-full">
+  <!-- HERO -->
+  <section class="pt-20 min-h-[40vh] flex items-center bg-surface">
+    <div class="max-w-7xl mx-auto px-6 py-16 w-full">
       <div class="fade-in">
-        <span class="text-primary uppercase tracking-widest text-xs font-semibold font-manrope block mb-5">Selected Works</span>
-        <h1 class="font-manrope font-extrabold text-6xl lg:text-7xl tracking-tighter text-on-surface leading-[1.0] mb-6">
-          The Visionary<br/><span class="text-primary-container">Archive.</span>
+        <span class="text-primary uppercase tracking-widest text-xs font-semibold font-manrope block mb-5">In the Room</span>
+        <h1 class="font-manrope font-extrabold text-6xl lg:text-7xl tracking-tighter text-on-surface leading-[1.0] mb-4">
+          Moments &<br/><span class="text-primary">Milestones.</span>
         </h1>
         <p class="text-on-surface-variant text-lg font-inter max-w-lg">
-          Projects built with purpose — from distributed infrastructure to venture-grade growth tools.
+          Events, panels, and rooms I've been a part of — building the ecosystem one conversation at a time.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ASYMMETRIC PROJECT GRID -->
-  <section class="bg-surface-container-low py-16">
+  <!-- FILTER TABS -->
+  <section class="bg-surface border-b border-outline-variant sticky top-20 z-40">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-12 gap-4">
+      <div class="flex gap-1 overflow-x-auto py-3">
+        <button class="gallery-filter flex-shrink-0 text-xs font-bold px-4 py-2 rounded-full font-manrope transition-all bg-primary text-white" data-filter="all">All</button>
+        <button class="gallery-filter flex-shrink-0 text-xs font-bold px-4 py-2 rounded-full font-manrope transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-filter="events">Events</button>
+        <button class="gallery-filter flex-shrink-0 text-xs font-bold px-4 py-2 rounded-full font-manrope transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-filter="photography">Photography</button>
+      </div>
+    </div>
+  </section>
 
-        <!-- Project 1 — col-span-8 -->
-        <div class="fade-in md:col-span-8 project-card relative group overflow-hidden rounded-[2rem] bg-surface-container cursor-pointer">
-          <div class="relative overflow-hidden aspect-video">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWpMyXNaixSX9OKVcyJtIqXPIgxIFjH6-PkqRUJjwxEyYKbjuVtnZs4HOR_1H2Uo9Ky5y-PSQeNv_MiB_h-qR7o5sdIC_hLbJeabFWOeKRXynH5rq2khUxxeDRcvZzuWd_z9d6Zr2PwNJlxV-uvMQjIuZFtwGtIwLV_4vxP6gG9WbaM9w0X5un3ja3duDl3B30-0Cl2MDKiAGcQpQFJQVGgWzaYyMpHf0xaJRlR7ZJnPqKxtWo8XgihMUU6iPLq-YIktcZtRc1p60"
-              alt="Nexus Protocol"
-              class="project-img w-full h-full object-cover"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#131B2E]/60 via-transparent to-transparent"></div>
-          </div>
-          <div class="absolute top-5 left-5 bg-tertiary-container text-on-tertiary-container text-xs font-bold px-3 py-1.5 rounded-lg font-manrope">
-            Founder's Pick
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between">
-              <div>
-                <h3 class="font-manrope font-extrabold text-xl text-on-surface tracking-tight mb-1">Nexus Protocol</h3>
-                <p class="text-on-surface-variant text-sm font-inter">Distributed infrastructure · 2022–Present</p>
+  <!-- EVENT CARDS GRID -->
+  <section class="bg-surface-container-low py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- EVENT CARD: Bundelkhand Venture Summit 2026 -->
+        <div class="event-card group cursor-pointer fade-in" data-category="events"
+          data-photos='["assets/images/IMG_0465.jpg","assets/images/IMG_0470.jpg","assets/images/IMG_0473.JPG"]'
+          data-label="Bundelkhand Venture Summit 2026"
+          data-date="Feb 28 – Mar 1, 2026"
+          data-desc="Invited as an investor and panelist — panel discussion on startups and fundraising.">
+          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
+            <!-- Cover photo -->
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/IMG_0470.jpg" alt="Bundelkhand Venture Summit 2026"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <!-- Photo count badge -->
+            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
+              <span class="material-symbols-outlined text-xs" style="font-size:12px">photo_library</span>
+              3 photos
+            </div>
+            <!-- Bottom info -->
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
+                <span class="text-on-surface-variant text-[10px] font-inter">Feb 28 – Mar 1, 2026</span>
               </div>
-              <a href="#" class="w-10 h-10 bg-surface-container-high rounded-xl flex items-center justify-center hover:bg-primary group/btn transition-colors">
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/btn:text-white transition-colors text-sm">arrow_outward</span>
-              </a>
+              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Bundelkhand Venture Summit 2026</h3>
+              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Invited as investor & panelist — discussion on startups and fundraising.</p>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 — col-span-4 -->
-        <div class="fade-in md:col-span-4 project-card relative group overflow-hidden rounded-[2rem] bg-surface-container cursor-pointer" style="transition-delay:0.08s">
-          <div class="relative overflow-hidden" style="aspect-ratio: 4/5">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnGdY3ilDRopFA21U1X0t-vtx9muV7GOr4vdYvGqXNeiVnslH6-VStk5PSPqbB2lB8qYtEBVS3GbAwkzMRxqtebWlP4mgxHdZM-YC0wDJovYprhEYXVsQNarXrNsT4OExfTwQXfDuOgbw_qxE96pnKwDgVjE12u2_ZNsO9ybvlmTuVrthOkYzqrHaaQi9fgbgMD5V32XBOiL8n0DUpj2FmRFYmEfl3tuxq5KSDAnLucnNffI7QLCS_ay1BNVF4Lu3JvlhORfpPtqo"
-              alt="Aura Mobile"
-              class="project-img w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between">
-              <div>
-                <h3 class="font-manrope font-extrabold text-xl text-on-surface tracking-tight mb-1">Aura Mobile</h3>
-                <p class="text-on-surface-variant text-sm font-inter">Consumer app · 2021</p>
+        <!-- EVENT CARD: startupnews.fyi Pitching Event -->
+        <div class="event-card group cursor-pointer fade-in" data-category="events"
+          data-photos='["assets/images/IMG_0553.jpg","assets/images/IMG_0661.jpg"]'
+          data-label="Pitching Event by startupnews.fyi — Ofis Square, Gurgaon"
+          data-date="March 21, 2026"
+          data-desc="Attended as investor alongside investors from Angel Bay, Madhukar Bhardwaj, SwiftSeed, Soonicorn Venture and many more.">
+          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/IMG_0553.jpg" alt="startupnews.fyi Pitching Event Gurgaon"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
+              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
+              2 photos
+            </div>
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
+                <span class="text-on-surface-variant text-[10px] font-inter">March 21, 2026</span>
               </div>
-              <a href="#" class="w-10 h-10 bg-surface-container-high rounded-xl flex items-center justify-center hover:bg-primary group/btn transition-colors">
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/btn:text-white transition-colors text-sm">arrow_outward</span>
-              </a>
+              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Pitching Event — startupnews.fyi</h3>
+              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Attended as investor at Ofis Square, Gurgaon alongside Angel Bay, SwiftSeed, Soonicorn Venture and more.</p>
             </div>
           </div>
         </div>
 
-        <!-- Project 3 — col-span-4 -->
-        <div class="fade-in md:col-span-4 project-card relative group overflow-hidden rounded-[2rem] bg-surface-container cursor-pointer">
-          <div class="relative overflow-hidden aspect-square">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMXpm8J7Rs-EXkAz4xLtpJq7qL754s0aWtCOgnnuAJaeF54V93oNfuabMmTpu0VHk4OrMER8mwsQHMhVjCOJcpOg7pGU6gGNqHbvdiDRbUm1vQsf5Vz9ZYGtymze33obVX0GMDOLxZOyBZ-akEPWTd58QmGSNgumeIxG6oENgLxYD0mHa-Y6spHxoMKyRw3k3Y7ajxQz3zIkrhN7aPiNuAxy1iTvSQ38JZRyVG5tlBfhCAa85dJw9rYs86_XagbxRcuJHID95F06k"
-              alt="Sentinel Engine"
-              class="project-img w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between">
-              <div>
-                <h3 class="font-manrope font-extrabold text-xl text-on-surface tracking-tight mb-1">Sentinel Engine</h3>
-                <p class="text-on-surface-variant text-sm font-inter">Security infra · 2020</p>
+        <!-- EVENT CARD: TiE Delhi NCR -->
+        <div class="event-card group cursor-pointer fade-in" data-category="events"
+          data-photos='["assets/images/IMG_0126.jpg","assets/images/IMG_0130.jpg","assets/images/IMG_0134.jpg","assets/images/IMG_0138.jpg"]'
+          data-label="TiE Delhi NCR — IHC, New Delhi"
+          data-date="February 25, 2026"
+          data-desc="Met Madhur (startupnews.fyi founder), Vineet Sagar (Venture Garage), Blue Tea founder, Nitesh, and many more ecosystem builders.">
+          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/IMG_0138.jpg" alt="TiE Delhi NCR event at IHC Delhi"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
+              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
+              4 photos
+            </div>
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
+                <span class="text-on-surface-variant text-[10px] font-inter">February 25, 2026</span>
               </div>
-              <a href="#" class="w-10 h-10 bg-surface-container-high rounded-xl flex items-center justify-center hover:bg-primary group/btn transition-colors">
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/btn:text-white transition-colors text-sm">arrow_outward</span>
-              </a>
+              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">TiE Delhi NCR</h3>
+              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">IHC, New Delhi — in a room full of investors and founders, while IIM interviews were being conducted next door.</p>
             </div>
           </div>
         </div>
 
-        <!-- Project 4 — col-span-8 -->
-        <div class="fade-in md:col-span-8 project-card relative group overflow-hidden rounded-[2rem] bg-surface-container cursor-pointer" style="transition-delay:0.08s">
-          <div class="relative overflow-hidden" style="aspect-ratio: 2/1">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8R7kOCz67hO6b08aywT68TcmViOtw1kot3bvj2XKi6QYDyLjZDQsRqZE1c13hj6LSuPx3v4m_lczmBg8fOUFHYu1yMlkGwyZCp95xCEFUjiLNEoLeT_wAQ7kIkgO2U7DNdwczptSx9byGvpkyt_EHgBrZL0TxO3G0Kv2X_PHjUuFA3muXAzB3kLG9--uTV4MOZHeGLg8RKEdAZoUu6TDJ3Sec6rMxkGWHUQiSVYtp5trlGznAQ_KXCkTGZCfkLdM6tkTizgUr9Kk"
-              alt="Atelier HQ"
-              class="project-img w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between">
-              <div>
-                <h3 class="font-manrope font-extrabold text-xl text-on-surface tracking-tight mb-1">Atelier HQ</h3>
-                <p class="text-on-surface-variant text-sm font-inter">Design platform · 2021</p>
+        <!-- EVENT CARD: Pitch in 180 Seconds — Sharda University -->
+        <div class="event-card group cursor-pointer fade-in" data-category="events"
+          data-photos='["assets/images/IMG_0067.jpg","assets/images/IMG_7772.JPG","assets/images/IMG_7777.JPG"]'
+          data-label="Pitch in 180 Seconds — Sharda University"
+          data-date="February 23, 2026"
+          data-desc="Attended as investor alongside Shivam Ahuja and other angel investors. Founders had 180 seconds to make their case.">
+          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/IMG_7777.JPG" alt="Pitch in 180 Seconds at Sharda University"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 20%;" />
+            </div>
+            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
+              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
+              3 photos
+            </div>
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
+                <span class="text-on-surface-variant text-[10px] font-inter">February 23, 2026</span>
               </div>
-              <a href="#" class="w-10 h-10 bg-surface-container-high rounded-xl flex items-center justify-center hover:bg-primary group/btn transition-colors">
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/btn:text-white transition-colors text-sm">arrow_outward</span>
-              </a>
+              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Pitch in 180 Seconds — Sharda University</h3>
+              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Attended as investor alongside <a href="https://shivamahuja.com/" target="_blank" rel="noopener" class="text-primary hover:underline">Shivam Ahuja</a> and other angel investors. Founders had 180 seconds to make their case.</p>
             </div>
           </div>
         </div>
 
-        <!-- Project 5 — col-span-6 -->
-        <div class="fade-in md:col-span-6 project-card relative group overflow-hidden rounded-[2rem] bg-surface-container cursor-pointer">
-          <div class="relative overflow-hidden aspect-video">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkb903B5DBEiOx4Ds3S6Iyhe6A9mSppbzCNjr65_CkOY3LDZuJ_TLfilE2nC7LD8k9SHeSo4us-ZNbgi7HutPrYF63uhOIv58IQ2rx7sCxo-EjLok84JdcGCxYI8lMaCWmOkT-1ElrtJky05bxdJPdEsnpV9i3jaOaNwmDj8JluZWcMVFL4WG0ISric-VX0c_gwgz3ISuyuqvpAZKB_gstTCQVf8UFAKVa7-R2qW58g274cGHrZkZh32_TY9jJL4zNJHPSJc3KFbA"
-              alt="Flow Visuals"
-              class="project-img w-full h-full object-cover"
-            />
-            <div class="absolute top-4 left-4 w-8 h-8 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center">
-              <span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+        <!-- EVENT CARD: Digital Inclusion Summit 2026 -->
+        <div class="event-card group cursor-pointer fade-in" data-category="events"
+          data-photos='["assets/images/IMG_2624.jpg","assets/images/IMG_2626.jpg","assets/images/IMG_2630.jpg","assets/images/IMG_2634.jpg"]'
+          data-label="Digital Inclusion Summit 2026 — Le Meridien, New Delhi"
+          data-date="February 6, 2026"
+          data-desc="Attended the Digital Inclusion Summit 2026 at Le Meridien, New Delhi.">
+          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/IMG_2634.jpg" alt="Digital Inclusion Summit 2026"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 45%;" />
             </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between">
-              <div>
-                <h3 class="font-manrope font-extrabold text-xl text-on-surface tracking-tight mb-1">Flow Visuals</h3>
-                <p class="text-on-surface-variant text-sm font-inter">Motion design · 2022</p>
+            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
+              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
+              4 photos
+            </div>
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
+                <span class="text-on-surface-variant text-[10px] font-inter">February 6, 2026</span>
               </div>
-              <a href="#" class="w-10 h-10 bg-surface-container-high rounded-xl flex items-center justify-center hover:bg-primary group/btn transition-colors">
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/btn:text-white transition-colors text-sm">arrow_outward</span>
-              </a>
+              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Digital Inclusion Summit 2026</h3>
+              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Le Meridien, New Delhi — summit on digital inclusion and the future of technology in India.</p>
             </div>
           </div>
         </div>
 
-        <!-- Project 6 — col-span-6 -->
-        <div class="fade-in md:col-span-6 project-card relative group overflow-hidden rounded-[2rem] bg-surface-container cursor-pointer" style="transition-delay:0.08s">
-          <div class="relative overflow-hidden aspect-video">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEJhWM8aL2fin3NmNomfCvrxzEeOdNkhB7rxYThB-RvtOYR8EhHwhibkBBDuidRZo16fMtkfSMklL-tAj4oK993Ug9gtzHOc0V1Sh65dTm6o7ohBhLb8HyrNHuAK7Jy9-KDNbYOkR71CtCEt55j4KvahkF7SlD5pIqoNjqhjKiRjIj-oshX5Nj4v9xEvYnHIx6H29q3Gl5UPV-5JTN7VwGujsNuIRLMkFPJ_vac7cSxYTBbzzKF5MTUpf2CIV8Z7RIzC6a1YujlRw"
-              alt="Venture Blueprint"
-              class="project-img w-full h-full object-cover"
-            />
-            <div class="absolute top-4 left-4 w-8 h-8 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center">
-              <span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+        <!-- EVENT CARD: Entrepreneur Awards 2026 -->
+        <div class="event-card group cursor-pointer fade-in" data-category="events"
+          data-photos='["assets/images/IMG_2583.jpg","assets/images/IMG_3809.JPG","assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG"]'
+          data-label="Entrepreneur Awards 2026 — Bharat Mandapam, New Delhi"
+          data-date="February 5, 2026"
+          data-desc="Attended with Shivam Ahuja and Kunwer Sachdev. Shivam was awarded Best Skill Education EdTech Startup.">
+          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG" alt="Entrepreneur Awards 2026 at Bharat Mandapam"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 30%;" />
             </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between">
-              <div>
-                <h3 class="font-manrope font-extrabold text-xl text-on-surface tracking-tight mb-1">Venture Blueprint</h3>
-                <p class="text-on-surface-variant text-sm font-inter">VC tools · 2023</p>
+            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
+              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
+              3 photos
+            </div>
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
+                <span class="text-on-surface-variant text-[10px] font-inter">February 5, 2026</span>
               </div>
-              <a href="#" class="w-10 h-10 bg-surface-container-high rounded-xl flex items-center justify-center hover:bg-primary group/btn transition-colors">
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/btn:text-white transition-colors text-sm">arrow_outward</span>
-              </a>
+              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Entrepreneur Awards 2026</h3>
+              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Bharat Mandapam, New Delhi — <a href="https://shivamahuja.com/" target="_blank" rel="noopener" class="text-primary hover:underline">Shivam Ahuja</a> awarded Best Skill Education EdTech Startup.</p>
             </div>
           </div>
         </div>
+
+        <!-- ADD NEW EVENTS BELOW THIS LINE -->
 
       </div>
     </div>
   </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="fixed inset-0 bg-[#131B2E]/95 z-50 hidden items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-5 right-5 text-white/60 hover:text-white transition-colors z-10">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <!-- Prev -->
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors z-10">
+      <span class="material-symbols-outlined text-4xl">chevron_left</span>
+    </button>
+    <!-- Next -->
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors z-10">
+      <span class="material-symbols-outlined text-4xl">chevron_right</span>
+    </button>
+    <div class="max-w-4xl w-full text-center">
+      <img id="lightbox-img" src="" alt="" class="w-full h-auto max-h-[75vh] object-contain rounded-2xl mx-auto" />
+      <div class="mt-4">
+        <p id="lightbox-label" class="text-white font-semibold font-manrope text-sm"></p>
+        <p id="lightbox-counter" class="text-white/40 font-inter text-xs mt-1"></p>
+      </div>
+    </div>
+  </div>
 
   <!-- CTA BANNER -->
   <section class="bg-surface py-16">
@@ -265,18 +335,18 @@
         <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2 class="font-manrope font-extrabold text-3xl lg:text-4xl text-white tracking-tighter mb-3">
-              Ready to build the future together?
+              Want to be in the same room?
             </h2>
             <p class="text-white/80 font-inter text-sm max-w-md">
-              Every great product started with one clear conversation. Let's have ours.
+              Whether it's a panel, a pitch, or just a conversation — let's connect.
             </p>
           </div>
           <div class="flex flex-wrap gap-4 shrink-0">
-            <a href="mailto:Tanishqjain.work@gmail.com" class="bg-white text-primary font-semibold px-6 py-3 rounded-xl text-sm hover:bg-primary-fixed transition-colors font-inter">
-              Start a Project
+            <a href="contact.html" class="bg-white text-primary font-semibold px-6 py-3 rounded-xl text-sm hover:bg-primary-fixed transition-colors font-inter">
+              Get in Touch
             </a>
             <a href="story.html" class="border border-white/40 text-white font-semibold px-6 py-3 rounded-xl text-sm hover:bg-white/10 transition-colors font-inter">
-              View Services
+              Read the Story
             </a>
           </div>
         </div>
@@ -288,7 +358,7 @@
   <footer class="bg-surface border-t border-surface-container-low py-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
       <a href="index.html" class="font-manrope font-extrabold text-lg tracking-tighter text-on-surface">Tanishq Jain</a>
-      <p class="text-on-surface-variant text-sm font-inter">© 2025 Tanishq Jain. Built at the intersection of deals, data & AI.</p>
+      <p class="text-on-surface-variant text-sm font-inter">© 2026 Tanishq Jain. Built at the intersection of deals, data & AI.</p>
       <div class="flex items-center gap-5">
         <a href="https://www.linkedin.com/in/tanishq-jain-6a1565122/" target="_blank" class="text-on-surface-variant hover:text-primary transition-colors text-sm font-inter">LinkedIn</a>
       </div>
@@ -296,6 +366,7 @@
   </footer>
 
   <script>
+    // ── Mobile menu ───────────────────────────────────────────────────────────
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     const bar1 = document.getElementById('bar1');
@@ -305,29 +376,83 @@
     btn.addEventListener('click', () => {
       open = !open;
       menu.classList.toggle('hidden', !open);
-      if (open) {
-        bar1.style.transform = 'translateY(8px) rotate(45deg)';
-        bar2.style.opacity = '0';
-        bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
-      } else {
-        bar1.style.transform = '';
-        bar2.style.opacity = '';
-        bar3.style.transform = '';
-      }
+      if (open) { bar1.style.transform = 'translateY(8px) rotate(45deg)'; bar2.style.opacity = '0'; bar3.style.transform = 'translateY(-8px) rotate(-45deg)'; }
+      else { bar1.style.transform = ''; bar2.style.opacity = ''; bar3.style.transform = ''; }
     });
+    document.querySelectorAll("#mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => { menu.classList.add("hidden"); open = false; bar1.style.transform = ""; bar2.style.opacity = ""; bar3.style.transform = ""; });
+    });
+
+    // ── Fade-in ───────────────────────────────────────────────────────────────
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08 });
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-    document.querySelectorAll("#mobile-menu a").forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.add("hidden");
-        open = false;
-        bar1.style.transform = "";
-        bar2.style.opacity = "";
-        bar3.style.transform = "";
+
+    // ── Filter ────────────────────────────────────────────────────────────────
+    document.querySelectorAll('.gallery-filter').forEach(f => {
+      f.addEventListener('click', () => {
+        document.querySelectorAll('.gallery-filter').forEach(p => {
+          p.classList.remove('bg-primary', 'text-white');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        f.classList.add('bg-primary', 'text-white');
+        f.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        const cat = f.dataset.filter;
+        document.querySelectorAll('.event-card').forEach(card => {
+          card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
+        });
       });
     });
+
+    // ── Lightbox with prev/next ───────────────────────────────────────────────
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxLabel = document.getElementById('lightbox-label');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+
+    let currentPhotos = [];
+    let currentIndex = 0;
+
+    function showPhoto(index) {
+      currentIndex = index;
+      lightboxImg.src = currentPhotos[index];
+      lightboxCounter.textContent = (currentPhotos.length > 1) ? `${index + 1} / ${currentPhotos.length}` : '';
+      document.getElementById('lightbox-prev').style.display = currentPhotos.length > 1 ? '' : 'none';
+      document.getElementById('lightbox-next').style.display = currentPhotos.length > 1 ? '' : 'none';
+    }
+
+    document.querySelectorAll('.event-card').forEach(card => {
+      card.addEventListener('click', () => {
+        currentPhotos = JSON.parse(card.dataset.photos);
+        lightboxLabel.textContent = card.dataset.label || '';
+        showPhoto(0);
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    document.getElementById('lightbox-prev').addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPhoto((currentIndex - 1 + currentPhotos.length) % currentPhotos.length);
+    });
+    document.getElementById('lightbox-next').addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPhoto((currentIndex + 1) % currentPhotos.length);
+    });
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') showPhoto((currentIndex + 1) % currentPhotos.length);
+      if (e.key === 'ArrowLeft') showPhoto((currentIndex - 1 + currentPhotos.length) % currentPhotos.length);
+    });
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
   </script>
 </body>
 </html>
