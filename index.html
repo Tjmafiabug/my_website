@@ -54,21 +54,7 @@
     .fade-in.visible { opacity: 1; transform: translateY(0); }
     .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
 
-    /* Cursor glow */
-    #cursor-glow {
-      position: fixed;
-      width: 480px;
-      height: 480px;
-      background: radial-gradient(circle, rgba(0,74,198,0.10) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.4s ease;
-      opacity: 0;
-      z-index: 0;
-    }
-
-    /* Typewriter cursor blink */
+/* Typewriter cursor blink */
     #tw-cursor {
       display: inline-block;
       width: 3px;
@@ -119,7 +105,6 @@
 
   <!-- HERO SECTION -->
   <section id="hero-section" class="min-h-screen pt-20 flex items-center relative overflow-hidden bg-surface">
-  <div id="cursor-glow"></div>
     <!-- Decorative orbs -->
     <div class="absolute top-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-20 right-1/4 w-80 h-80 bg-tertiary/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -382,22 +367,7 @@
       }, { passive: true });
     })();
 
-    // ── 4. Cursor glow ───────────────────────────────────────────────────────
-    (function () {
-      const glow = document.getElementById('cursor-glow');
-      const heroSection = document.getElementById('hero-section');
-      if (!glow || !heroSection) return;
-      heroSection.addEventListener('mousemove', (e) => {
-        glow.style.opacity = '1';
-        glow.style.left = e.clientX + 'px';
-        glow.style.top = e.clientY + 'px';
-      });
-      heroSection.addEventListener('mouseleave', () => {
-        glow.style.opacity = '0';
-      });
-    })();
-
-    // ── 5. Service cards 3D tilt ─────────────────────────────────────────────
+// ── 5. Service cards 3D tilt ─────────────────────────────────────────────
     (function () {
       document.querySelectorAll('.tilt-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
