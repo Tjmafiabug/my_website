@@ -36,6 +36,27 @@ const { title, description } = Astro.props;
     gtag('js', new Date());
     gtag('config', 'G-SMHG32VKX5');
   </script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Tanishq Jain",
+      "url": "https://tanishqjain.co",
+      "image": "https://tanishqjain.co/assets/images/974cbced-1a24-40a1-8e21-31aaa5b963ef.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/tanishq-jain-6a1565122/",
+        "https://twitter.com/tanishqjain"
+      ],
+      "jobTitle": "Ecosystem Builder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Delhi Angels"
+      },
+      "description": "Ecosystem builder, startup sourcing specialist, and AI productivity architect."
+    }
+  </script>
 </head>
 <body class="bg-surface text-on-surface overflow-x-hidden">
   <Navbar />
