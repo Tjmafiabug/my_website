@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #004AC6;
+  --color-tertiary: #3E3FCC;
+  --color-on-surface: #131B2E;
+  --color-surface: #FAF8FF;
+  --color-surface-container-low: #F2F3FF;
+  --color-surface-container: #EAEDFF;
+  --color-surface-container-high: #E2E7FF;
+  --color-surface-container-highest: #DAE2FD;
+  --color-on-surface-variant: #434655;
+  --color-primary-fixed: #DBE1FF;
+  --color-on-primary-fixed-variant: #003EA8;
+  --color-secondary-container: #D5E3FC;
+  --color-on-secondary-container: #57657A;
+  --color-tertiary-container: #585BE6;
+  --color-on-tertiary-container: #F1EEFF;
+  --color-outline-variant: #C3C6D7;
+  --color-primary-container: #2563EB;
+  --color-on-primary: #FFFFFF;
+  --color-on-background: #131B2E;
+
+  --font-manrope: 'Manrope', 'sans-serif';
+  --font-inter: 'Inter', 'sans-serif';
+
+  --radius-2rem: 2rem;
+  --radius-2-5rem: 2.5rem;
+}
+
+body { font-family: var(--font-inter); background-color: var(--color-surface); color: var(--color-on-surface); }
+.font-manrope { font-family: var(--font-manrope); }
+.prose h2 { font-family: var(--font-manrope); font-weight: 700; font-size: 1.4rem; color: var(--color-on-surface); margin: 2rem 0 0.75rem; }
+.prose h3 { font-family: var(--font-manrope); font-weight: 600; font-size: 1.1rem; color: var(--color-on-surface); margin: 1.5rem 0 0.5rem; }
+.prose p { line-height: 1.8; margin-bottom: 1.25rem; color: var(--color-on-surface-variant); }
+.prose strong { color: var(--color-on-surface); }

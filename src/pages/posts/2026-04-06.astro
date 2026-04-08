@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="From 503 to 200 OK: Diving into Server Management Under Pressure — Tanishq Jain" description="This morning, I opened the website of my mentor, Mr. Kunwwer Sachdev, and found a dreaded 503 error. What followed was a crash course in Linux server management...">
+  <main class="pt-32 pb-24">
+    <div class="max-w-2xl mx-auto px-6">
+      <a href="/blog" class="inline-flex items-center gap-1.5 text-on-surface-variant text-sm font-inter hover:text-primary transition-colors mb-10">
+        <span class="material-symbols-outlined text-base">arrow_back</span>
+        Back to blog
+      </a>
+      <div class="mb-6">
+        <span class="bg-primary-fixed text-primary text-xs font-bold px-3 py-1 rounded-full font-manrope">Essay</span>
+        <span class="text-on-surface-variant text-xs font-inter ml-3">April 6, 2026</span>
+      </div>
+      <h1 class="font-manrope font-extrabold text-4xl lg:text-5xl tracking-tighter text-on-surface leading-tight mb-10">From 503 to 200 OK: Diving into Server Management Under Pressure</h1>
+      <div class="prose">
+        <h2>The Panic and The Responsibility</h2>
+        <p>This morning, I opened the website of someone I deeply respect as a mentor and guide—Mr. Kunwwer Sachdev. Instead of his familiar homepage, I was met with a dreaded "SORRY! 503 Service Unavailable" error.</p>
+        <p>I have absolutely zero background in server management. Until today, I had never touched Linux, and I didn't even know what WHM (Web Host Manager) looked like. But the site was down, and I couldn't just sit and watch it happen.</p>
+
+        <h2>Diving into the Unknown</h2>
+        <p>With no previous experience, I dove headfirst into the server infrastructure. A few hours later, working step-by-step through the terminal and control panels, I managed to pull off a complete recovery. Here's what the rescue mission entailed:</p>
+        <ul class="list-disc leading-relaxed mb-[1.25rem] text-[#434655] pl-6 marker:text-primary">
+          <li class="mb-2"><strong>Tracked down a PHP crash</strong> caused by a messy library conflict that took down the services.</li>
+          <li class="mb-2"><strong>Reinstalled the core PHP packages</strong> straight from the terminal.</li>
+          <li class="mb-2"><strong>Cleared out 4GB of useless log files</strong> that were completely choking the server's storage and memory.</li>
+          <li class="mb-2"><strong>Blocked a suspicious IP</strong> that was actively scanning the server structure.</li>
+          <li class="mb-2"><strong>Ran a full system audit</strong> and uncovered 10 hidden vulnerabilities and issues.</li>
+        </ul>
+
+        <h2>The Satisfaction of the Fix</h2>
+        <p>Finally, the moment of truth arrived. I refreshed the page, and the site was back to a clean 200 OK. Every single metric stabilized.</p>
+        <p>I'm not going to lie—it was an insanely stressful few hours. But seeing the website load again was undeniably one of the most satisfying things I've done in a long time. There is a unique thrill in stepping completely outside your comfort zone and brute-forcing your way through a highly technical problem.</p>
+
+        <h2>Learning by Doing</h2>
+        <p>Sometimes, raw responsibility teaches you faster than any course ever can. This incident reinforced my belief in the growth mindset and learning by doing. I am incredibly grateful for moments like these that force me to adapt and expand my skill set on the fly.</p>
+        <p>Have you ever been thrown into something completely outside your comfort zone and figured it out anyway? It's where the real growth happens.</p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

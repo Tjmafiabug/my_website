@@ -1,0 +1,38 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/story.html"
+  to = "/story"
+  status = 301
+
+[[redirects]]
+  from = "/journey.html"
+  to = "/journey"
+  status = 301
+
+[[redirects]]
+  from = "/gallery.html"
+  to = "/gallery"
+  status = 301
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2026-03-30.html"
+  to = "/posts/2026-03-30"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2026-04-06.html"
+  to = "/posts/2026-04-06"
+  status = 301

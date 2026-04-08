@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import crewai; print\\(''crewai ok'', crewai.__version__\\)\")",
+      "Bash(pip3 install:*)",
+      "WebFetch(domain:lithiuminverter.in)"
+    ]
+  }
+}

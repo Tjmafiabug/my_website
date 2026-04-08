@@ -1,114 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery — Tanishq Jain | Events & Startup Ecosystem</title>
-  <meta name="description" content="Photos from startup events, investor panels, and ecosystem moments — Tanishq Jain at TiE Delhi NCR, Bundelkhand Venture Summit, and more." />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tanishqjain.co/gallery" />
-  <meta property="og:title" content="Gallery — Tanishq Jain" />
-  <meta property="og:description" content="Selected works and projects from Tanishq Jain — ecosystem builder, deal sourcer, and AI enthusiast." />
-  <meta property="og:image" content="https://tanishqjain.co/assets/images/974cbced-1a24-40a1-8e21-31aaa5b963ef.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Gallery — Tanishq Jain" />
-  <meta name="twitter:description" content="Selected works and projects from Tanishq Jain — ecosystem builder, deal sourcer, and AI enthusiast." />
-  <meta name="twitter:image" content="https://tanishqjain.co/assets/images/974cbced-1a24-40a1-8e21-31aaa5b963ef.jpg" />
-  <link rel="canonical" href="https://tanishqjain.co/gallery.html" />
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#004AC6',
-            tertiary: '#3E3FCC',
-            'on-surface': '#131B2E',
-            surface: '#FAF8FF',
-            'surface-container-low': '#F2F3FF',
-            'surface-container': '#EAEDFF',
-            'surface-container-high': '#E2E7FF',
-            'surface-container-highest': '#DAE2FD',
-            'on-surface-variant': '#434655',
-            'primary-fixed': '#DBE1FF',
-            'on-primary-fixed-variant': '#003EA8',
-            'secondary-container': '#D5E3FC',
-            'on-secondary-container': '#57657A',
-            'tertiary-container': '#585BE6',
-            'on-tertiary-container': '#F1EEFF',
-            'outline-variant': '#C3C6D7',
-            'primary-container': '#2563EB',
-            'on-primary': '#FFFFFF',
-            'on-background': '#131B2E',
-          },
-          fontFamily: {
-            manrope: ['Manrope', 'sans-serif'],
-            inter: ['Inter', 'sans-serif'],
-          },
-          borderRadius: {
-            '2rem': '2rem',
-            '2.5rem': '2.5rem',
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body { font-family: 'Inter', sans-serif; background-color: #FAF8FF; color: #131B2E; }
-    .font-manrope { font-family: 'Manrope', sans-serif; }
-    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    .project-img { transition: transform 0.4s ease; }
-    .project-card:hover .project-img { transform: scale(1.04); }
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMHG32VKX5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SMHG32VKX5');
-  </script>
-</head>
-<body class="bg-surface text-on-surface overflow-x-hidden">
-
-  <!-- NAVIGATION -->
-  <nav class="fixed top-0 left-0 right-0 z-50 h-20 bg-[#FAF8FF]/80 backdrop-blur-xl border-b border-[#F2F3FF]">
-    <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-      <a href="index.html" class="font-manrope font-extrabold text-xl tracking-tighter text-on-surface">Tanishq Jain</a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Home</a>
-        <a href="story.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Story</a>
-        <a href="journey.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Journey</a>
-        <a href="gallery.html" class="text-sm font-medium text-primary border-b-2 border-primary pb-0.5">Gallery</a>
-        <a href="blog.html" class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Blog</a>
-        <a href="contact.html" class="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-on-primary-fixed-variant transition-colors">Contact Me</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
-        <span class="block w-6 h-0.5 bg-on-surface transition-all duration-300" id="bar1"></span>
-        <span class="block w-6 h-0.5 bg-on-surface transition-all duration-300" id="bar2"></span>
-        <span class="block w-6 h-0.5 bg-on-surface transition-all duration-300" id="bar3"></span>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-[#FAF8FF]/95 backdrop-blur-xl px-6 pb-6 border-b border-[#F2F3FF]">
-      <div class="flex flex-col gap-4 pt-4">
-        <a href="index.html" class="text-sm font-medium text-on-surface-variant">Home</a>
-        <a href="story.html" class="text-sm font-medium text-on-surface-variant">Story</a>
-        <a href="journey.html" class="text-sm font-medium text-on-surface-variant">Journey</a>
-        <a href="gallery.html" class="text-sm font-medium text-primary">Gallery</a>
-        <a href="blog.html" class="text-sm font-medium text-on-surface-variant">Blog</a>
-        <a href="contact.html" class="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-xl text-center">Contact Me</a>
-      </div>
-    </div>
-  </nav>
-
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Gallery — Tanishq Jain | Events & Startup Ecosystem" description="Photos from startup events, investor panels, and ecosystem moments — Tanishq Jain at TiE Delhi NCR, Bundelkhand Venture Summit, and more.">
   <!-- HERO -->
   <section class="pt-20 min-h-[40vh] flex items-center bg-surface">
     <div class="max-w-7xl mx-auto px-6 py-16 w-full">
@@ -142,14 +35,14 @@
 
         <!-- EVENT CARD: Bundelkhand Venture Summit 2026 -->
         <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["assets/images/IMG_0465.jpg","assets/images/IMG_0470.jpg","assets/images/IMG_0473.JPG"]'
+          data-photos='["/assets/images/IMG_0465.jpg","/assets/images/IMG_0470.jpg","/assets/images/IMG_0473.JPG"]'
           data-label="Bundelkhand Venture Summit 2026"
           data-date="Feb 28 – Mar 1, 2026"
           data-desc="Invited as an investor and panelist — panel discussion on startups and fundraising.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <!-- Cover photo -->
             <div class="aspect-video overflow-hidden">
-              <img src="assets/images/IMG_0470.jpg" alt="Bundelkhand Venture Summit 2026"
+              <img src="/assets/images/IMG_0470.jpg" alt="Bundelkhand Venture Summit 2026"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <!-- Photo count badge -->
@@ -171,13 +64,13 @@
 
         <!-- EVENT CARD: startupnews.fyi Pitching Event -->
         <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["assets/images/IMG_0553.jpg","assets/images/IMG_0661.jpg"]'
+          data-photos='["/assets/images/IMG_0553.jpg","/assets/images/IMG_0661.jpg"]'
           data-label="Pitching Event by startupnews.fyi — Ofis Square, Gurgaon"
           data-date="March 21, 2026"
           data-desc="Attended as investor alongside investors from Angel Bay, Madhukar Bhardwaj, SwiftSeed, Soonicorn Venture and many more.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="assets/images/IMG_0553.jpg" alt="startupnews.fyi Pitching Event Gurgaon"
+              <img src="/assets/images/IMG_0553.jpg" alt="startupnews.fyi Pitching Event Gurgaon"
                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -197,13 +90,13 @@
 
         <!-- EVENT CARD: TiE Delhi NCR -->
         <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["assets/images/IMG_0126.jpg","assets/images/IMG_0130.jpg","assets/images/IMG_0134.jpg","assets/images/IMG_0138.jpg"]'
+          data-photos='["/assets/images/IMG_0126.jpg","/assets/images/IMG_0130.jpg","/assets/images/IMG_0134.jpg","/assets/images/IMG_0138.jpg"]'
           data-label="TiE Delhi NCR — IHC, New Delhi"
           data-date="February 25, 2026"
           data-desc="Met Madhur (startupnews.fyi founder), Vineet Sagar (Venture Garage), Blue Tea founder, Nitesh, and many more ecosystem builders.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="assets/images/IMG_0138.jpg" alt="TiE Delhi NCR event at IHC Delhi"
+              <img src="/assets/images/IMG_0138.jpg" alt="TiE Delhi NCR event at IHC Delhi"
                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -223,13 +116,13 @@
 
         <!-- EVENT CARD: Pitch in 180 Seconds — Sharda University -->
         <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["assets/images/IMG_0067.jpg","assets/images/IMG_7772.JPG","assets/images/IMG_7777.JPG"]'
+          data-photos='["/assets/images/IMG_0067.jpg","/assets/images/IMG_7772.JPG","/assets/images/IMG_7777.JPG"]'
           data-label="Pitch in 180 Seconds — Sharda University"
           data-date="February 23, 2026"
           data-desc="Attended as investor alongside Shivam Ahuja and other angel investors. Founders had 180 seconds to make their case.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="assets/images/IMG_7777.JPG" alt="Pitch in 180 Seconds at Sharda University"
+              <img src="/assets/images/IMG_7777.JPG" alt="Pitch in 180 Seconds at Sharda University"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 20%;" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -249,13 +142,13 @@
 
         <!-- EVENT CARD: Digital Inclusion Summit 2026 -->
         <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["assets/images/IMG_2624.jpg","assets/images/IMG_2626.jpg","assets/images/IMG_2630.jpg","assets/images/IMG_2634.jpg"]'
+          data-photos='["/assets/images/IMG_2624.jpg","/assets/images/IMG_2626.jpg","/assets/images/IMG_2630.jpg","/assets/images/IMG_2634.jpg"]'
           data-label="Digital Inclusion Summit 2026 — Le Meridien, New Delhi"
           data-date="February 6, 2026"
           data-desc="Attended the Digital Inclusion Summit 2026 at Le Meridien, New Delhi.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="assets/images/IMG_2634.jpg" alt="Digital Inclusion Summit 2026"
+              <img src="/assets/images/IMG_2634.jpg" alt="Digital Inclusion Summit 2026"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 45%;" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -275,13 +168,13 @@
 
         <!-- EVENT CARD: Entrepreneur Awards 2026 -->
         <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["assets/images/IMG_2583.jpg","assets/images/IMG_3809.JPG","assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG"]'
+          data-photos='["/assets/images/IMG_2583.jpg","/assets/images/IMG_3809.JPG","/assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG"]'
           data-label="Entrepreneur Awards 2026 — Bharat Mandapam, New Delhi"
           data-date="February 5, 2026"
           data-desc="Attended with Shivam Ahuja and Kunwer Sachdev. Shivam was awarded Best Skill Education EdTech Startup.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG" alt="Entrepreneur Awards 2026 at Bharat Mandapam"
+              <img src="/assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG" alt="Entrepreneur Awards 2026 at Bharat Mandapam"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 30%;" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -343,10 +236,10 @@
             </p>
           </div>
           <div class="flex flex-wrap gap-4 shrink-0">
-            <a href="contact.html" class="bg-white text-primary font-semibold px-6 py-3 rounded-xl text-sm hover:bg-primary-fixed transition-colors font-inter">
+            <a href="/contact" class="bg-white text-primary font-semibold px-6 py-3 rounded-xl text-sm hover:bg-primary-fixed transition-colors font-inter">
               Get in Touch
             </a>
-            <a href="story.html" class="border border-white/40 text-white font-semibold px-6 py-3 rounded-xl text-sm hover:bg-white/10 transition-colors font-inter">
+            <a href="/story" class="border border-white/40 text-white font-semibold px-6 py-3 rounded-xl text-sm hover:bg-white/10 transition-colors font-inter">
               Read the Story
             </a>
           </div>
@@ -356,33 +249,8 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-surface border-t border-surface-container-low py-10">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-      <a href="index.html" class="font-manrope font-extrabold text-lg tracking-tighter text-on-surface">Tanishq Jain</a>
-      <p class="text-on-surface-variant text-sm font-inter">© 2026 Tanishq Jain. Built at the intersection of deals, data & AI.</p>
-      <div class="flex items-center gap-5">
-        <a href="https://www.linkedin.com/in/tanishq-jain-6a1565122/" target="_blank" class="text-on-surface-variant hover:text-primary transition-colors text-sm font-inter">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // ── Mobile menu ───────────────────────────────────────────────────────────
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
-    let open = false;
-    btn.addEventListener('click', () => {
-      open = !open;
-      menu.classList.toggle('hidden', !open);
-      if (open) { bar1.style.transform = 'translateY(8px) rotate(45deg)'; bar2.style.opacity = '0'; bar3.style.transform = 'translateY(-8px) rotate(-45deg)'; }
-      else { bar1.style.transform = ''; bar2.style.opacity = ''; bar3.style.transform = ''; }
-    });
-    document.querySelectorAll("#mobile-menu a").forEach(link => {
-      link.addEventListener("click", () => { menu.classList.add("hidden"); open = false; bar1.style.transform = ""; bar2.style.opacity = ""; bar3.style.transform = ""; });
-    });
+  
+<script is:inline>
 
     // ── Fade-in ───────────────────────────────────────────────────────────────
     const observer = new IntersectionObserver((entries) => {
@@ -418,6 +286,7 @@
     function showPhoto(index) {
       currentIndex = index;
       lightboxImg.src = currentPhotos[index];
+      lightboxImg.alt = lightboxLabel.textContent || "Gallery image";
       lightboxCounter.textContent = (currentPhotos.length > 1) ? `${index + 1} / ${currentPhotos.length}` : '';
       document.getElementById('lightbox-prev').style.display = currentPhotos.length > 1 ? '' : 'none';
       document.getElementById('lightbox-next').style.display = currentPhotos.length > 1 ? '' : 'none';
@@ -454,6 +323,7 @@
       lightbox.classList.remove('flex');
       document.body.style.overflow = '';
     }
-  </script>
-</body>
-</html>
+  
+</script>
+
+</BaseLayout>

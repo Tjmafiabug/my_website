@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Contact Tanishq Jain | Ecosystem Builder & Investor" description="Get in touch with Tanishq Jain — ecosystem builder, deal sourcer, and AI enthusiast based in Noida.">
+  <!-- MAIN -->
+  <main class="pt-20 min-h-screen flex items-center bg-surface">
+    <div class="max-w-7xl mx-auto px-6 py-20 w-full grid md:grid-cols-2 gap-20 items-start">
+
+      <!-- Left: info -->
+      <div class="fade-in">
+        <span class="text-primary uppercase tracking-widest text-xs font-semibold font-manrope block mb-6">Get in Touch</span>
+        <h1 class="font-manrope font-extrabold text-5xl lg:text-6xl tracking-tighter text-on-surface leading-[1.05] mb-6">
+          Let's start a<br/><span class="text-primary">conversation.</span>
+        </h1>
+        <p class="text-on-surface-variant text-lg leading-relaxed font-inter mb-10 max-w-md">
+          Whether you're a founder looking for feedback, an investor exploring deal flow, or just someone who wants to connect — I'm always open to a good conversation.
+        </p>
+
+        <!-- Contact details -->
+        <div class="space-y-5">
+          <a href="mailto:Tanishqjain.work@gmail.com" class="flex items-center gap-4 group">
+            <div class="w-11 h-11 bg-surface-container rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors duration-300 flex-shrink-0">
+              <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300 text-xl">mail</span>
+            </div>
+            <div>
+              <p class="text-xs text-on-surface-variant font-inter uppercase tracking-widest mb-0.5">Email</p>
+              <p class="text-sm font-semibold text-on-surface font-inter group-hover:text-primary transition-colors">Tanishqjain.work@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/tanishq-jain-6a1565122/" target="_blank" class="flex items-center gap-4 group">
+            <div class="w-11 h-11 bg-surface-container rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors duration-300 flex-shrink-0">
+              <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300 text-xl">person</span>
+            </div>
+            <div>
+              <p class="text-xs text-on-surface-variant font-inter uppercase tracking-widest mb-0.5">LinkedIn</p>
+              <p class="text-sm font-semibold text-on-surface font-inter group-hover:text-primary transition-colors">Tanishq Jain</p>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 bg-surface-container rounded-xl flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+            </div>
+            <div>
+              <p class="text-xs text-on-surface-variant font-inter uppercase tracking-widest mb-0.5">Based in</p>
+              <p class="text-sm font-semibold text-on-surface font-inter">Noida, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="fade-in" style="transition-delay: 0.15s">
+        <div class="bg-surface-container-low rounded-[2rem] p-8 lg:p-10">
+
+          <!-- Success message (hidden by default) -->
+          <div id="form-success" class="hidden text-center py-10">
+            <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-5">
+              <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
+            </div>
+            <h3 class="font-manrope font-bold text-2xl text-on-surface tracking-tight mb-2">Message sent!</h3>
+            <p class="text-on-surface-variant text-sm font-inter">I'll get back to you soon.</p>
+          </div>
+
+          <form id="contact-form" action="https://formspree.io/f/xeepebda" method="POST" class="space-y-5">
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="text-xs font-semibold text-on-surface-variant font-manrope uppercase tracking-widest block mb-2">Name</label>
+                <input
+                  id="name" name="name" type="text" required placeholder="Your name"
+                  class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-sm font-inter text-on-surface placeholder-on-surface-variant/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                />
+              </div>
+              <div>
+                <label for="email" class="text-xs font-semibold text-on-surface-variant font-manrope uppercase tracking-widest block mb-2">Email</label>
+                <input
+                  id="email" name="email" type="email" required placeholder="you@example.com"
+                  class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-sm font-inter text-on-surface placeholder-on-surface-variant/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="text-xs font-semibold text-on-surface-variant font-manrope uppercase tracking-widest block mb-2">Subject</label>
+              <input
+                id="subject" name="subject" type="text" placeholder="What's this about?"
+                class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-sm font-inter text-on-surface placeholder-on-surface-variant/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="text-xs font-semibold text-on-surface-variant font-manrope uppercase tracking-widest block mb-2">Message</label>
+              <textarea
+                id="message" name="message" rows="5" required placeholder="Tell me what's on your mind..."
+                class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-sm font-inter text-on-surface placeholder-on-surface-variant/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-primary text-white font-semibold py-3.5 rounded-xl text-sm font-inter hover:bg-on-primary-fixed-variant transition-colors flex items-center justify-center gap-2"
+            >
+              <span id="btn-text">Send Message</span>
+              <span class="material-symbols-outlined text-base">send</span>
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  
+<script is:inline>
+
+    // Fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+    // Form AJAX submission
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    const btnText = document.getElementById('btn-text');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btnText.textContent = 'Sending…';
+      form.querySelector('button').disabled = true;
+
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+      } else {
+        btnText.textContent = 'Send Message';
+        form.querySelector('button').disabled = false;
+        alert('Something went wrong. Please email me directly at Tanishqjain.work@gmail.com');
+      }
+    });
+  
+</script>
+
+</BaseLayout>
