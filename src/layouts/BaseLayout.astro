@@ -20,6 +20,8 @@ const {
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
   
+  <ClientRouter />
+
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
@@ -47,8 +49,6 @@ const {
     gtag('config', 'G-SMHG32VKX5');
   </script>
 
-  <ClientRouter />
-
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
     {
@@ -70,7 +70,7 @@ const {
     }
   </script>
 </head>
-<body class="bg-surface text-on-surface overflow-x-hidden">
+<body class="bg-surface text-on-surface overflow-x-hidden" transition:animate="fade">
   <Navbar />
   <slot />
   <Footer />
