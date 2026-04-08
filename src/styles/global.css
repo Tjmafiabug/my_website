@@ -28,9 +28,38 @@
   --radius-2-5rem: 2.5rem;
 }
 
-body { font-family: var(--font-inter); background-color: var(--color-surface); color: var(--color-on-surface); }
-.font-manrope { font-family: var(--font-manrope); }
-.prose h2 { font-family: var(--font-manrope); font-weight: 700; font-size: 1.4rem; color: var(--color-on-surface); margin: 2rem 0 0.75rem; }
-.prose h3 { font-family: var(--font-manrope); font-weight: 600; font-size: 1.1rem; color: var(--color-on-surface); margin: 1.5rem 0 0.5rem; }
-.prose p { line-height: 1.8; margin-bottom: 1.25rem; color: var(--color-on-surface-variant); }
-.prose strong { color: var(--color-on-surface); }
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.font-manrope {
+  font-family: var(--font-manrope);
+}
+
+.prose h2 {
+  font-family: var(--font-manrope);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-on-surface);
+  margin: 2rem 0 0.75rem;
+}
+
+.prose h3 {
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-on-surface);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.prose p {
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  color: var(--color-on-surface-variant);
+}
+
+.prose strong {
+  color: var(--color-on-surface);
+}
