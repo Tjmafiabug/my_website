@@ -1,14 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 
-// Import cover images
-import img0470 from '../assets/images/IMG_0470.jpg';
-import img0553 from '../assets/images/IMG_0553.jpg';
-import img0138 from '../assets/images/IMG_0138.jpg';
-import img7777 from '../assets/images/IMG_7777.JPG';
-import img2634 from '../assets/images/IMG_2634.jpg';
-import imgEntrepreneur from '../assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG';
+const gallery = await getCollection('gallery');
+// Sort by date (we can add a timestamp to frontmatter for better sorting, but for now we'll just show them)
 ---
 <BaseLayout title="Gallery — Tanishq Jain | Events & Startup Ecosystem" description="Photos from startup events, investor panels, and ecosystem moments — Tanishq Jain at TiE Delhi NCR, Bundelkhand Venture Summit, and more.">
   <!-- HERO -->
@@ -42,166 +38,35 @@ import imgEntrepreneur from '../assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b
     <div class="max-w-7xl mx-auto px-6">
       <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-        <!-- EVENT CARD: Bundelkhand Venture Summit 2026 -->
-        <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["/assets/images/IMG_0465.jpg","/assets/images/IMG_0470.jpg","/assets/images/IMG_0473.JPG"]'
-          data-label="Bundelkhand Venture Summit 2026"
-          data-date="Feb 28 – Mar 1, 2026"
-          data-desc="Invited as an investor and panelist — panel discussion on startups and fundraising.">
-          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
-            <!-- Cover photo -->
-            <div class="aspect-video overflow-hidden">
-              <Image src={img0470} alt="Bundelkhand Venture Summit 2026"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <!-- Photo count badge -->
-            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
-              <span class="material-symbols-outlined text-xs" style="font-size:12px">photo_library</span>
-              3 photos
-            </div>
-            <!-- Bottom info -->
-            <div class="p-4">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
-                <span class="text-on-surface-variant text-[10px] font-inter">Feb 28 – Mar 1, 2026</span>
+        {gallery.map(item => (
+          <div class="event-card group cursor-pointer fade-in" 
+            data-category={item.data.category}
+            data-photos={JSON.stringify(item.data.photos.map(p => p.src))}
+            data-label={item.data.title}
+            data-date={item.data.date}
+            data-desc={item.data.description}>
+            <div class="relative overflow-hidden rounded-2xl bg-surface-container">
+              <div class="aspect-video overflow-hidden">
+                <Image src={item.data.cover} alt={item.data.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Bundelkhand Venture Summit 2026</h3>
-              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Invited as investor & panelist — discussion on startups and fundraising.</p>
+              <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
+                <span class="material-symbols-outlined text-xs" style="font-size:12px">photo_library</span>
+                {item.data.photos.length} photos
+              </div>
+              <div class="p-4">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">
+                    {item.data.category === 'events' ? 'Event' : 'Photography'}
+                  </span>
+                  <span class="text-on-surface-variant text-[10px] font-inter">{item.data.date}</span>
+                </div>
+                <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">{item.data.title}</h3>
+                <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">{item.data.description}</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- EVENT CARD: startupnews.fyi Pitching Event -->
-        <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["/assets/images/IMG_0553.jpg","/assets/images/IMG_0661.jpg"]'
-          data-label="Pitching Event by startupnews.fyi — Ofis Square, Gurgaon"
-          data-date="March 21, 2026"
-          data-desc="Attended as investor alongside investors from Angel Bay, Madhukar Bhardwaj, SwiftSeed, Soonicorn Venture and many more.">
-          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
-            <div class="aspect-video overflow-hidden">
-              <Image src={img0553} alt="startupnews.fyi Pitching Event Gurgaon"
-                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
-              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
-              2 photos
-            </div>
-            <div class="p-4">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
-                <span class="text-on-surface-variant text-[10px] font-inter">March 21, 2026</span>
-              </div>
-              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Pitching Event — startupnews.fyi</h3>
-              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Attended as investor at Ofis Square, Gurgaon alongside Angel Bay, SwiftSeed, Soonicorn Venture and more.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- EVENT CARD: TiE Delhi NCR -->
-        <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["/assets/images/IMG_0126.jpg","/assets/images/IMG_0130.jpg","/assets/images/IMG_0134.jpg","/assets/images/IMG_0138.jpg"]'
-          data-label="TiE Delhi NCR — IHC, New Delhi"
-          data-date="February 25, 2026"
-          data-desc="Met Madhur (startupnews.fyi founder), Vineet Sagar (Venture Garage), Blue Tea founder, Nitesh, and many more ecosystem builders.">
-          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
-            <div class="aspect-video overflow-hidden">
-              <Image src={img0138} alt="TiE Delhi NCR event at IHC Delhi"
-                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
-              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
-              4 photos
-            </div>
-            <div class="p-4">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
-                <span class="text-on-surface-variant text-[10px] font-inter">February 25, 2026</span>
-              </div>
-              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">TiE Delhi NCR</h3>
-              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">IHC, New Delhi — in a room full of investors and founders, while IIM interviews were being conducted next door.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- EVENT CARD: Pitch in 180 Seconds — Sharda University -->
-        <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["/assets/images/IMG_0067.jpg","/assets/images/IMG_7772.JPG","/assets/images/IMG_7777.JPG"]'
-          data-label="Pitch in 180 Seconds — Sharda University"
-          data-date="February 23, 2026"
-          data-desc="Attended as investor alongside Shivam Ahuja and other angel investors. Founders had 180 seconds to make their case.">
-          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
-            <div class="aspect-video overflow-hidden">
-              <Image src={img7777} alt="Pitch in 180 Seconds at Sharda University"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 20%;" />
-            </div>
-            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
-              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
-              3 photos
-            </div>
-            <div class="p-4">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
-                <span class="text-on-surface-variant text-[10px] font-inter">February 23, 2026</span>
-              </div>
-              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Pitch in 180 Seconds — Sharda University</h3>
-              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Attended as investor alongside <a href="https://shivamahuja.com/" target="_blank" rel="noopener" class="text-on-primary-fixed-variant underline decoration-primary/40 hover:decoration-primary transition-all">Shivam Ahuja</a> and other angel investors. Founders had 180 seconds to make their case.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- EVENT CARD: Digital Inclusion Summit 2026 -->
-        <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["/assets/images/IMG_2624.jpg","/assets/images/IMG_2626.jpg","/assets/images/IMG_2630.jpg","/assets/images/IMG_2634.jpg"]'
-          data-label="Digital Inclusion Summit 2026 — Le Meridien, New Delhi"
-          data-date="February 6, 2026"
-          data-desc="Attended the Digital Inclusion Summit 2026 at Le Meridien, New Delhi.">
-          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
-            <div class="aspect-video overflow-hidden">
-              <Image src={img2634} alt="Digital Inclusion Summit 2026"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 45%;" />
-            </div>
-            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
-              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
-              4 photos
-            </div>
-            <div class="p-4">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
-                <span class="text-on-surface-variant text-[10px] font-inter">February 6, 2026</span>
-              </div>
-              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Digital Inclusion Summit 2026</h3>
-              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Le Meridien, New Delhi — summit on digital inclusion and the future of technology in India.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- EVENT CARD: Entrepreneur Awards 2026 -->
-        <div class="event-card group cursor-pointer fade-in" data-category="events"
-          data-photos='["/assets/images/IMG_2583.jpg","/assets/images/IMG_3809.JPG","/assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG"]'
-          data-label="Entrepreneur Awards 2026 — Bharat Mandapam, New Delhi"
-          data-date="February 5, 2026"
-          data-desc="Attended with Shivam Ahuja and Kunwer Sachdev. Shivam was awarded Best Skill Education EdTech Startup.">
-          <div class="relative overflow-hidden rounded-2xl bg-surface-container">
-            <div class="aspect-video overflow-hidden">
-              <Image src={imgEntrepreneur} alt="Entrepreneur Awards 2026 at Bharat Mandapam"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 30%;" />
-            </div>
-            <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
-              <span class="material-symbols-outlined" style="font-size:12px">photo_library</span>
-              3 photos
-            </div>
-            <div class="p-4">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="bg-primary-fixed text-primary text-[10px] font-bold px-2 py-0.5 rounded-full font-manrope">Event</span>
-                <span class="text-on-surface-variant text-[10px] font-inter">February 5, 2026</span>
-              </div>
-              <h3 class="font-manrope font-bold text-sm text-on-surface tracking-tight">Entrepreneur Awards 2026</h3>
-              <p class="text-on-surface-variant text-xs font-inter mt-1 leading-relaxed">Bharat Mandapam, New Delhi — <a href="https://shivamahuja.com/" target="_blank" rel="noopener" class="text-on-primary-fixed-variant underline decoration-primary/40 hover:decoration-primary transition-all">Shivam Ahuja</a> awarded Best Skill Education EdTech Startup.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- ADD NEW EVENTS BELOW THIS LINE -->
+        ))}
 
       </div>
     </div>

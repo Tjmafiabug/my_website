@@ -10,6 +10,19 @@ const postsCollection = defineCollection({
   }),
 });
 
+const galleryCollection = defineCollection({
+  type: 'content',
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.string(),
+    category: z.enum(['events', 'photography']),
+    cover: image(),
+    photos: z.array(image()),
+  }),
+});
+
 export const collections = {
   'posts': postsCollection,
+  'gallery': galleryCollection,
 };
