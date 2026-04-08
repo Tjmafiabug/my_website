@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import heroPortrait from '../assets/images/974cbced-1a24-40a1-8e21-31aaa5b963ef.jpg';
 ---
 <BaseLayout title="Tanishq Jain — Ecosystem Builder" description="Ecosystem builder based in Noida. Sourcing startups, building deal pipelines, and connecting founders with capital — at the intersection of deals, data & AI.">
   <!-- HERO SECTION -->
@@ -27,11 +29,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- Offset border decoration -->
           <div class="absolute -top-4 -right-4 w-full h-full rounded-[2rem] border-2 border-primary-fixed"></div>
           <div class="absolute -top-2 -right-2 w-full h-full rounded-[2rem] border border-surface-container-high"></div>
-          <img
-            src="/assets/images/974cbced-1a24-40a1-8e21-31aaa5b963ef.jpg"
+          <Image
+            src={heroPortrait}
             alt="Tanishq Jain — Ecosystem Builder"
             class="relative z-10 w-full max-w-sm rounded-[2rem] object-cover aspect-[3/4] shadow-2xl"
           />
+
           <!-- Floating chip -->
           <div class="absolute z-20 bottom-6 -left-8 bg-tertiary-container text-on-tertiary-container text-xs font-semibold font-manrope px-4 py-2 rounded-xl shadow-lg">
             DELHI ANGELS ECOSYSTEM

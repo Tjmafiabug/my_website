@@ -1,5 +1,9 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = await getCollection('posts');
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 <BaseLayout title="Blog — Tanishq Jain | Startup Investing & Ecosystem" description="Thoughts on startup ecosystems, early-stage investing, AI, and the Indian startup scene by Tanishq Jain.">
   <!-- BLOG HEADER -->
@@ -20,88 +24,72 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- COMING SOON — shown only when no posts exist -->
-  <section id="coming-soon" class="bg-surface pb-24">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="fade-in border border-outline-variant rounded-2xl p-12 text-center">
-        <p class="text-on-surface-variant text-base font-inter mb-6 leading-relaxed">
-          I haven't published here yet — but I'm in rooms, at events, and in conversations every day that are worth documenting. Follow on LinkedIn for updates in the meantime.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <a href="https://www.linkedin.com/in/tanishq-jain-6a1565122/" target="_blank"
-            class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-on-primary-fixed-variant transition-colors font-inter text-sm">
-            <span class="material-symbols-outlined text-base">open_in_new</span>
-            Follow on LinkedIn
-          </a>
-        </div>
-        <p class="text-on-surface-variant text-xs font-semibold uppercase tracking-widest font-manrope mb-4">Topics on my mind</p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Startup Sourcing</span>
-          <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Early-Stage Investing</span>
-          <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">AI & Productivity</span>
-          <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Indian Startup Ecosystem</span>
-          <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Founder Stories</span>
-          <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Books & Frameworks</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POSTS GRID -->
-  <section id="posts-section" class="bg-surface pb-24">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- POST: From 503 to 200 OK -->
-        <article class="bg-surface-container-low rounded-2xl overflow-hidden fade-in hover:shadow-lg transition-shadow duration-300">
-          <div class="p-8">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="bg-primary-fixed text-primary text-xs font-bold px-3 py-1 rounded-full font-manrope">Essay</span>
-              <span class="text-on-surface-variant text-xs font-inter">April 6, 2026</span>
-            </div>
-            <h2 class="font-manrope font-bold text-xl text-on-surface mb-3 leading-snug">From 503 to 200 OK: Diving into Server Management Under Pressure</h2>
-            <p class="text-on-surface-variant text-sm font-inter leading-relaxed mb-6">This morning, I opened the website of my mentor, Mr. Kunwwer Sachdev, and found a dreaded 503 error. What followed was a crash course in Linux server management...</p>
-            <a href="/posts/2026-04-06" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold font-inter hover:gap-2.5 transition-all">
-              Read more
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
+  {posts.length === 0 ? (
+    <!-- COMING SOON — shown only when no posts exist -->
+    <section id="coming-soon" class="bg-surface pb-24">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="fade-in border border-outline-variant rounded-2xl p-12 text-center">
+          <p class="text-on-surface-variant text-base font-inter mb-6 leading-relaxed">
+            I haven't published here yet — but I'm in rooms, at events, and in conversations every day that are worth documenting. Follow on LinkedIn for updates in the meantime.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+            <a href="https://www.linkedin.com/in/tanishq-jain-6a1565122/" target="_blank"
+              class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-on-primary-fixed-variant transition-colors font-inter text-sm">
+              <span class="material-symbols-outlined text-base">open_in_new</span>
+              Follow on LinkedIn
             </a>
           </div>
-        </article>
-
-        <!-- POST: Cultural Nuances -->
-        <article class="bg-surface-container-low rounded-2xl overflow-hidden fade-in hover:shadow-lg transition-shadow duration-300">
-          <div class="p-8">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="bg-primary-fixed text-primary text-xs font-bold px-3 py-1 rounded-full font-manrope">Essay</span>
-              <span class="text-on-surface-variant text-xs font-inter">March 30, 2026</span>
-            </div>
-            <h2 class="font-manrope font-bold text-xl text-on-surface mb-3 leading-snug">Cultural Nuances: The Power of Respect in Indian Pitch Rooms</h2>
-            <p class="text-on-surface-variant text-sm font-inter leading-relaxed mb-6">Respecting cultural nuances isn't just polite – it's essential. In India, this holds significant weight. Investors here value humility and respect...</p>
-            <a href="/posts/2026-03-30" class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold font-inter hover:gap-2.5 transition-all">
-              Read more
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
-            </a>
+          <p class="text-on-surface-variant text-xs font-semibold uppercase tracking-widest font-manrope mb-4">Topics on my mind</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Startup Sourcing</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Early-Stage Investing</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">AI & Productivity</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Indian Startup Ecosystem</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Founder Stories</span>
+            <span class="bg-surface-container text-on-surface text-sm font-semibold px-4 py-2 rounded-full font-manrope">Books & Frameworks</span>
           </div>
-        </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  ) : (
+    <!-- POSTS GRID -->
+    <section id="posts-section" class="bg-surface pb-24">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {posts.map(post => (
+            <article class="bg-surface-container-low rounded-2xl overflow-hidden fade-in hover:shadow-lg transition-shadow duration-300">
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="bg-primary-fixed text-primary text-xs font-bold px-3 py-1 rounded-full font-manrope">{post.data.category}</span>
+                  <span class="text-on-surface-variant text-xs font-inter">
+                    {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </span>
+                </div>
+                <h2 class="font-manrope font-bold text-xl text-on-surface mb-3 leading-snug">{post.data.title}</h2>
+                <p class="text-on-surface-variant text-sm font-inter leading-relaxed mb-6">{post.data.description}</p>
+                <a href={`/posts/${post.slug}`} class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold font-inter hover:gap-2.5 transition-all">
+                  Read more
+                  <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- FOOTER -->
   
 <script is:inline>
-    // Show posts grid if posts exist, hide coming-soon
-    const postsSection = document.getElementById('posts-section');
-    const comingSoon = document.getElementById('coming-soon');
-    if (postsSection && postsSection.querySelectorAll('article').length > 0) {
-      postsSection.classList.remove('hidden');
-      comingSoon.classList.add('hidden');
-    }
-
     // Scroll-triggered fade-in
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 </script>
+
+</BaseLayout>
+
 
 </BaseLayout>

@@ -1,5 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+
+// Import cover images
+import img0470 from '../assets/images/IMG_0470.jpg';
+import img0553 from '../assets/images/IMG_0553.jpg';
+import img0138 from '../assets/images/IMG_0138.jpg';
+import img7777 from '../assets/images/IMG_7777.JPG';
+import img2634 from '../assets/images/IMG_2634.jpg';
+import imgEntrepreneur from '../assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG';
 ---
 <BaseLayout title="Gallery — Tanishq Jain | Events & Startup Ecosystem" description="Photos from startup events, investor panels, and ecosystem moments — Tanishq Jain at TiE Delhi NCR, Bundelkhand Venture Summit, and more.">
   <!-- HERO -->
@@ -42,7 +51,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <!-- Cover photo -->
             <div class="aspect-video overflow-hidden">
-              <img src="/assets/images/IMG_0470.jpg" alt="Bundelkhand Venture Summit 2026"
+              <Image src={img0470} alt="Bundelkhand Venture Summit 2026"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <!-- Photo count badge -->
@@ -70,7 +79,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           data-desc="Attended as investor alongside investors from Angel Bay, Madhukar Bhardwaj, SwiftSeed, Soonicorn Venture and many more.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="/assets/images/IMG_0553.jpg" alt="startupnews.fyi Pitching Event Gurgaon"
+              <Image src={img0553} alt="startupnews.fyi Pitching Event Gurgaon"
                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -96,7 +105,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           data-desc="Met Madhur (startupnews.fyi founder), Vineet Sagar (Venture Garage), Blue Tea founder, Nitesh, and many more ecosystem builders.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="/assets/images/IMG_0138.jpg" alt="TiE Delhi NCR event at IHC Delhi"
+              <Image src={img0138} alt="TiE Delhi NCR event at IHC Delhi"
                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -122,7 +131,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           data-desc="Attended as investor alongside Shivam Ahuja and other angel investors. Founders had 180 seconds to make their case.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="/assets/images/IMG_7777.JPG" alt="Pitch in 180 Seconds at Sharda University"
+              <Image src={img7777} alt="Pitch in 180 Seconds at Sharda University"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 20%;" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -148,7 +157,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           data-desc="Attended the Digital Inclusion Summit 2026 at Le Meridien, New Delhi.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="/assets/images/IMG_2634.jpg" alt="Digital Inclusion Summit 2026"
+              <Image src={img2634} alt="Digital Inclusion Summit 2026"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 45%;" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -174,7 +183,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           data-desc="Attended with Shivam Ahuja and Kunwer Sachdev. Shivam was awarded Best Skill Education EdTech Startup.">
           <div class="relative overflow-hidden rounded-2xl bg-surface-container">
             <div class="aspect-video overflow-hidden">
-              <img src="/assets/images/b2b5f2ac-b5fd-4938-b971-0946f29c9b27.JPG" alt="Entrepreneur Awards 2026 at Bharat Mandapam"
+              <Image src={imgEntrepreneur} alt="Entrepreneur Awards 2026 at Bharat Mandapam"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 30%;" />
             </div>
             <div class="absolute top-3 right-3 bg-[#131B2E]/70 backdrop-blur-sm text-white text-[10px] font-bold font-manrope px-2.5 py-1 rounded-full flex items-center gap-1">
