@@ -65,9 +65,13 @@ posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
                     {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                   </span>
                 </div>
-                <h2 class="font-manrope font-bold text-xl text-on-surface mb-3 leading-snug">{post.data.title}</h2>
+                <h2 class="font-manrope font-bold text-xl text-on-surface mb-3 leading-snug">
+                  <a href={`/posts/${post.id}`} class="hover:text-primary transition-colors">
+                    {post.data.title}
+                  </a>
+                </h2>
                 <p class="text-on-surface-variant text-sm font-inter leading-relaxed mb-6">{post.data.description}</p>
-                <a href={`/posts/${post.slug}`} class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold font-inter hover:gap-2.5 transition-all">
+                <a href={`/posts/${post.id}`} class="inline-flex items-center gap-1.5 text-primary text-sm font-semibold font-inter hover:gap-2.5 transition-all">
                   Read more
                   <span class="material-symbols-outlined text-base">arrow_forward</span>
                 </a>
